@@ -1,18 +1,19 @@
 @import "./normalize.css";
 
 :root {
-  --color-accent: #ff3400;
-  --color-body: #918ca4;
-  --color-body-darker: #5c5775;
-  --color-headings: #1b0760;
-  --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-border: #ccc;
-  --border-radius: 30px;
+  --color-white: #f7f7f7;
+  --color-black: #25313c;
+  --color-secondary: #fbe1b7;
+  --color-accent: #5c78e7;
+  --border-radius: 8px;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -22,47 +23,57 @@
   box-sizing: border-box;
 }
 
-.nav {
-  background: #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  align-items: center;
+/* Typography */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 
-.nav__list {
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
+body {
+  font-family: var(--font-open-sans);
+  font-size: 1.8rem;
+  color: var(--color-black);
+  line-height: 1.6;
 }
 
-.nav__item {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-bottom: 1px solid #222;
+h1,
+h2,
+h3 {
+  font-family: var(--font-nunito-sans);
+  /* margin-bottom: 1rem; */
+  /* line-height: 1.1; */
 }
 
-.nav__item > a {
-  color: #d2d0db;
-  transition: color 0.3s;
+h1 {
+  font-size: 7rem;
 }
 
-.nav__item > a:hover {
-  color: #fff;
+h2 {
+  font-size: 4rem;
 }
 
-.nav__list {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  font-size: 1.6rem;
-  max-height: 100%;
-  opacity: 1;
+h3 {
+  font-size: 3rem;
 }
 
-.nav__item {
-  border: 0;
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
 }
