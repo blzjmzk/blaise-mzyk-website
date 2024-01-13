@@ -31,9 +31,12 @@ html {
 
 body {
   font-family: var(--font-open-sans);
+  background-color: var(--color-white);
   font-size: 1.8rem;
   color: var(--color-black);
   line-height: 1.6;
+  height: 100%;
+  width: 100%;
 }
 
 h1,
@@ -60,7 +63,7 @@ p {
   margin-top: 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 1.6rem;
   }
