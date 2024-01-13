@@ -10,7 +10,11 @@ const NavBar = () => {
   return (
     <nav className={`${styles.navigation} container`}>
       <Link className="navBrand" href="/">
-        <Image src={logo_of_blaise_mzyk} alt="Logo of Blaise Mzyk" />
+        <Image
+          src={logo_of_blaise_mzyk}
+          alt="Logo of Blaise Mzyk"
+          width={180}
+        />
       </Link>
       <div className={styles.navMenu} onClick={() => setMenuOpen(!menuOpen)}>
         MENU
@@ -38,7 +42,7 @@ const NavBar = () => {
         </li>
         <li className={styles.navItem}>
           <Link href="/blog" className={styles.navLink}>
-            Blog
+            <button className="btn btn-outline">Blog</button>
           </Link>
         </li>
       </ul>

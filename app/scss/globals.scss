@@ -1,4 +1,5 @@
 @import "./normalize.css";
+
 :root {
   --color-white: #f7f7f7;
   --color-black: #25313c;
@@ -23,7 +24,7 @@ html {
   box-sizing: border-box;
 }
 
-/* TYPOGRAPHY */
+/* Typography */
 ::selection {
   background: var(--color-primary);
   color: var(--color-white);
@@ -67,18 +68,22 @@ p {
   body {
     font-size: 1.6rem;
   }
+
   h1 {
     font-size: 8rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   h3 {
     font-size: 2.4rem;
   }
 }
 
 /* BUTTONS */
+
 .btn {
   border-radius: var(--btn-border-radius);
   border: 0;
@@ -97,18 +102,18 @@ p {
 }
 
 .btn-primary:hover {
-  background: #889dee;
+  background: lighten(#5c78e7, 10%);
 }
 
-.btn-outline {
+.btn-ghost {
   background: var(--color-white);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
 }
 
-.btn-outline:hover {
-  background: var(--color-primary);
-  color: var(--color-white);
+.btn-ghost:hover {
+  background: var(--color-headings);
+  color: white;
 }
 
 @media screen and (min-width: 1024px) {
@@ -116,5 +121,3 @@ p {
     font-size: 1.6rem;
   }
 }
-
-/*# sourceMappingURL=globals.css.map */
