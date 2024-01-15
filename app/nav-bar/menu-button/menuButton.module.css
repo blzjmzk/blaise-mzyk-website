@@ -1,0 +1,33 @@
+.menuButton {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.line {
+  transition: y 270ms ease-in-out 270ms, rotate 270ms ease-in-out,
+    opacity 0ms 270ms;
+  transform-origin: center;
+}
+
+.menuButton[aria-expanded="true"] .line {
+  transition: y 270ms ease-in-out, rotate 270ms ease-in-out 270ms,
+    opacity 0ms 270ms;
+}
+
+.menuButton[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.menuButton[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.menuButton[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
+.menuButton[aria-expanded="true"] .middle {
+  opacity: 0;
+}

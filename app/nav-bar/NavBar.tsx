@@ -4,20 +4,25 @@ import React, { useState } from "react";
 import styles from "./NavBar.module.css";
 import Image from "next/image";
 import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
+import MenuButton from "./menu-button/menuButton";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className={`${styles.navigation} container`}>
-      <Link className="navBrand" href="/">
+      <Link className={styles.navBrand} href="/">
         <Image
           src={logo_of_blaise_mzyk}
           alt="Logo of Blaise Mzyk"
-          width={180}
+          width={130}
         />
       </Link>
-      <div className={styles.navMenu} onClick={() => setMenuOpen(!menuOpen)}>
-        MENU
+      <div className={styles.navMenu}>
+        <MenuButton
+          onClick={() => setMenuOpen(!menuOpen)}
+          ariaExpanded={menuOpen}
+        />
       </div>
       <ul className={menuOpen ? styles.navOpen : styles.navList}>
         <li className={styles.navItem}>
