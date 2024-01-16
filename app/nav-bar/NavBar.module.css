@@ -37,11 +37,18 @@
   margin: 0.4rem 0.8rem;
   display: block;
   text-decoration: none;
-  color: var(--color-black);
   padding: 0.5rem;
   outline: 0;
   width: 100%;
   white-space: nowrap;
+}
+
+.nonActiveNavLink {
+  color: var(--color-black);
+}
+
+.activeNavLink {
+  color: var(--color-primary);
 }
 
 .navLink:hover {

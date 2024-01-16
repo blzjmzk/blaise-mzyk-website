@@ -5,9 +5,19 @@ import styles from "./NavBar.module.css";
 import Image from "next/image";
 import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
 import MenuButton from "./menu-button/menuButton";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const currentPath = usePathname();
+
+  const navLinks = [
+    { label: "Philosophy", href: "/philosophy" },
+    { label: "Programming", href: "/programming" },
+    { label: "Book Notes", href: "/book-notes" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <nav className={`${styles.navigation} container`}>
@@ -25,26 +35,20 @@ const NavBar = () => {
         />
       </div>
       <ul className={menuOpen ? styles.navOpen : styles.navList}>
-        <li className={styles.navItem}>
-          <Link href="/philosophy" className={styles.navLink}>
-            Philosophy
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link href="/programming" className={styles.navLink}>
-            Programming
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link href="/book-notes" className={styles.navLink}>
-            Book Notes
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link href="/contact" className={styles.navLink}>
-            Contact
-          </Link>
-        </li>
+        {navLinks.map((navLink) => (
+          <li key={navLink.href} className={styles.navItem}>
+            <Link
+              href={navLink.href}
+              className={`${styles.navLink} ${
+                navLink.href === currentPath
+                  ? styles.activeNavLink
+                  : styles.nonActiveNavLink
+              }`}
+            >
+              {navLink.label}
+            </Link>
+          </li>
+        ))}
         <li className={styles.navItem}>
           <Link href="/blog" className={styles.navLink}>
             <button className="btn btn-outline">Blog</button>
@@ -56,3 +60,29 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+{
+  /* <li className={styles.navItem}>
+<Link href="/philosophy" className={styles.navLink}>
+  Philosophy
+</Link>
+</li>
+<li className={styles.navItem}>
+<Link href="/programming" className={styles.navLink}>
+  Programming
+</Link>
+</li>
+<li className={styles.navItem}>
+<Link href="/book-notes" className={styles.navLink}>
+  Book Notes
+</Link>
+</li>
+<li className={styles.navItem}>
+<Link href="/contact" className={styles.navLink}>
+  Contact
+</Link>
+</li>
+<li className={styles.navItem}>
+
+</li> */
+}
