@@ -6,14 +6,14 @@
 }
 
 .line {
-  transition: y 270ms ease-in-out 270ms, rotate 270ms ease-in-out,
-    opacity 0ms 270ms;
+  transition: y 200ms ease-in-out 200ms, rotate 200ms ease-in-out,
+    opacity 0ms 200ms;
   transform-origin: center;
 }
 
 .menuButton[aria-expanded="true"] .line {
-  transition: y 270ms ease-in-out, rotate 270ms ease-in-out 270ms,
-    opacity 0ms 270ms;
+  transition: y 200ms ease-in-out, rotate 200ms ease-in-out 200ms,
+    opacity 0ms 200ms;
 }
 
 .menuButton[aria-expanded="true"] :is(.top, .bottom) {

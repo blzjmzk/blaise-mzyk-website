@@ -6,24 +6,29 @@
   align-items: center;
   width: 100%;
   position: relative;
+  /* border: 1px solid red; */
 }
 
 .navBrand {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .navList {
   display: none;
+  /* border: 1px solid red; */
 }
 
 .navOpen {
   display: flex;
+  gap: 1.6rem;
   flex-direction: column;
   position: absolute;
   top: 65px;
   width: 100%;
   background-color: var(--color-white);
+  /* background-color: red; */
   height: calc(100vh - 65px);
+  transform-origin: top;
 }
 
 .navItem {
@@ -34,13 +39,11 @@
 }
 
 .navLink {
-  margin: 0.4rem 0.8rem;
-  display: block;
   text-decoration: none;
-  padding: 0.5rem;
   outline: 0;
   width: 100%;
   white-space: nowrap;
+  /* border: 1px solid red; */
 }
 
 .nonActiveNavLink {
@@ -56,10 +59,11 @@
 }
 
 .navMenu {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,16 +71,13 @@
     display: none;
   }
 
-  .navigation {
-    height: 80px;
+  .navItem {
+    width: auto;
   }
 
   .navList {
     display: flex;
+    gap: 3.2rem;
     align-items: center;
-  }
-
-  .navItem {
-    border: 0;
   }
 }

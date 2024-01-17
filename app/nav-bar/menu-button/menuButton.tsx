@@ -6,7 +6,7 @@ interface Props {
   ariaExpanded: boolean;
 }
 
-const MenuButton = ({ onClick, ariaExpanded = false }: Props) => {
+const MenuButton = ({ onClick, ariaExpanded }: Props) => {
   return (
     <button
       className={styles.menuButton}

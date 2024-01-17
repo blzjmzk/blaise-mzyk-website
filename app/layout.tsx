@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${nunitoSans.variable}`}>
+      <body className={`${openSans.variable} ${nunitoSans.variable} container`}>
         <NavBar />
         <main>{children}</main>
       </body>

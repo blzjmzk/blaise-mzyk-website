@@ -2,7 +2,7 @@
 :root {
   --color-white: #f7f7f7;
   --color-black: #25313c;
-  --color-primary: #5c78e7;
+  --color-primary: #4566e7;
   --color-secondary: #fbe1b7;
   --border-radius: 8px;
   --btn-border-radius: 8px;
@@ -14,6 +14,7 @@ html {
 
 .container {
   max-width: 1160px;
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
@@ -118,3 +119,37 @@ p {
 }
 
 /*# sourceMappingURL=globals.css.map */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.heroFirst {
+  position: relative;
+}
+
+.heroImage {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.heroBanner {
+  background-color: var(--color-secondary);
+  width: 300px;
+  position: absolute;
+  top: 3rem;
+  left: 19rem;
+}
+
+h2 {
+  white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+}
+
+h2::after {
+  content: "\A"; /* Dodaje nową linię */
+  white-space: pre; /* Pozwala na interpretację specjalnych znaków */
+  word-break: break-word; /* Zapobiega łamaniu słów, aby nie przekraczać szerokości kontenera */
+}
