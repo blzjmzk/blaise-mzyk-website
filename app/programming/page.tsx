@@ -1,7 +1,7 @@
-import React from "react";
+import Header from "../components/header";
 
 const ProgrammingPage = () => {
-  return <div>ProgrammingPage</div>;
+  return <Header>Programming</Header>;
 };
 
 export default ProgrammingPage;

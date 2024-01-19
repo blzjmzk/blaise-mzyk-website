@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "../components/header";
 
 const BookNotesPage = () => {
-  return <div>BookNotesPage</div>;
+  return <Header>Book Notes</Header>;
 };
 
 export default BookNotesPage;

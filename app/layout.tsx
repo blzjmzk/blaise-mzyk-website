@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Open_Sans } from "next/font/google";
 import "./css/globals.css";
-import NavBar from "./nav-bar";
+import NavBar from "./navbar";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -27,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${nunitoSans.variable} container`}>
-        <NavBar />
+        <header>
+          <NavBar />
+        </header>
         <main>{children}</main>
       </body>
     </html>
