@@ -36,47 +36,70 @@ body {
   font-size: 1.8rem;
   color: var(--color-black);
   line-height: 1.6;
-  height: 100%;
-  width: 100%;
   font-weight: 400;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-nunito-sans);
-  /* margin-bottom: 1rem; */
-  /* line-height: 1.1; */
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6.866rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 5.493rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 4.395rem;
+}
+
+h4 {
+  font-size: 3.516rem;
+}
+
+h5 {
+  font-size: 2.813rem;
 }
 
 p {
   margin-top: 0;
 }
 
+.copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(37, 49, 60, 0.59);
+  margin: 0 auto 4rem auto;
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.6rem;
   }
+
   h1 {
-    font-size: 8rem;
+    font-size: 6.104rem;
   }
+
   h2 {
-    font-size: 4rem;
+    font-size: 4.883rem;
   }
+
   h3 {
-    font-size: 2.4rem;
+    font-size: 3.906rem;
+  }
+
+  h4 {
+    font-size: 3.125rem;
+  }
+
+  h5 {
+    font-size: 2.5rem;
   }
 }
 
@@ -86,7 +109,7 @@ p {
   border: 0;
   cursor: pointer;
   outline: 0;
-  height: 3.6rem;
+  height: 4rem;
   padding: 0 1.6rem;
   min-width: 6.4rem;
   white-space: nowrap;
@@ -98,7 +121,7 @@ p {
 }
 
 .btn-primary:hover {
-  background: #889dee;
+  background: #4c70ff;
 }
 
 .btn-outline {
@@ -108,8 +131,12 @@ p {
 }
 
 .btn-outline:hover {
-  background: var(--color-primary);
+  background: #dcdfe8;
+}
+
+.link-clear {
   color: var(--color-white);
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -119,37 +146,3 @@ p {
 }
 
 /*# sourceMappingURL=globals.css.map */
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.heroFirst {
-  position: relative;
-}
-
-.heroImage {
-  position: relative;
-  width: 300px;
-  height: 400px;
-}
-
-.heroBanner {
-  background-color: var(--color-secondary);
-  width: 300px;
-  position: absolute;
-  top: 3rem;
-  left: 19rem;
-}
-
-h2 {
-  white-space: nowrap; /* Zapobiega zawijaniu tekstu */
-}
-
-h2::after {
-  content: "\A"; /* Dodaje nową linię */
-  white-space: pre; /* Pozwala na interpretację specjalnych znaków */
-  word-break: break-word; /* Zapobiega łamaniu słów, aby nie przekraczać szerokości kontenera */
-}

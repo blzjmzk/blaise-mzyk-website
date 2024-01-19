@@ -125,14 +125,14 @@ const NavBar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className={styles.navOpen}
+            className={styles.navListOpen}
           >
             <motion.ul
               variants={containerVars}
               initial="initial"
               animate="open"
               exit="initial"
-              className={styles.navOpen}
+              className={styles.navListOpen}
             >
               {navLinks.map((navLink) => (
                 <div key={navLink.href} className={styles.hidden}>
