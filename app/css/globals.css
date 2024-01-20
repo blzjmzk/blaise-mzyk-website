@@ -145,4 +145,16 @@ p {
   }
 }
 
+.postContainer {
+  background-color: var(--color-secondary);
+  margin: 2rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+.flex {
+  gap: 2rem;
+}
+
 /*# sourceMappingURL=globals.css.map */
