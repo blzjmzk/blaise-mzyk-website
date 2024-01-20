@@ -3,21 +3,21 @@ import styles from "./Sidebar.module.css";
 
 const SideBar = () => {
   return (
-    <aside className={styles.sidepanel}>
+    <aside className={styles.sidePanel}>
       <ul>
-        <li>
+        <li className={styles.sideItem}>
           <Link href="/blaise/posts" className={styles.sideLink}>
             Add Posts
           </Link>
         </li>
-        <li>
+        <li className={styles.sideItem}>
           <Link href="/blaise/projects" className={styles.sideLink}>
-            Add Posts
+            Add Projects
           </Link>
         </li>
-        <li>
+        <li className={styles.sideItem}>
           <Link href="/blaise/book-notes" className={styles.sideLink}>
-            Add Posts
+            Add Book Notes
           </Link>
         </li>
       </ul>

@@ -1,19 +1,15 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import Header from "../components/header";
-import Link from "next/link";
 import SideBar from "./_sidebar";
+import styles from "./Layout.module.css";
 
-interface Props {
-  children: ReactNode;
-}
-
-const AdminLayout = ({ children }: Props) => {
+const AdminLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header>Admin Panel</Header>
-      <div className="flex">
+      <div className={styles.adminPanel}>
         <SideBar />
-        <div>{children}</div>
+        <div className={styles.workSpace}>{children}</div>
       </div>
     </>
   );
