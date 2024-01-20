@@ -10,8 +10,3 @@ const SectionHeading = ({ children }: PropsWithChildren) => {
 };
 
 export default SectionHeading;
-
-//
-// <h2 className={styles.headingText}>{children}</h2>
-// <div className={styles.headingHighlight} />
-//

@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../_components/header";
 
 const ProgrammingPage = () => {
   return <Header>Programming</Header>;

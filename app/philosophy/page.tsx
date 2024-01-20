@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/header";
-import SectionHeading from "../components/section-heading";
+import Header from "../_components/header";
+import SectionHeading from "../_components/section-heading";
 
 const PhilosophyPage = () => {
   return (

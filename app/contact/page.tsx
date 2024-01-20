@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../_components/header";
 
 const ContactPage = () => {
   return <Header>Contact</Header>;

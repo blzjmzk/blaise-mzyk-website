@@ -27,3 +27,9 @@
   z-index: -1;
   margin-left: 0.6rem;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 4rem;
+  }
+}
