@@ -31,6 +31,7 @@ export default function RootLayout({
           <NavBar />
         </header>
         <main>{children}</main>
+        <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
       </body>
     </html>
   );

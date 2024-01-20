@@ -24,12 +24,12 @@ html {
   box-sizing: border-box;
 }
 
-/* TYPOGRAPHY */
 ::selection {
   background: var(--color-primary);
   color: var(--color-white);
 }
 
+/* TYPOGRAPHY */
 body {
   font-family: var(--font-open-sans);
   background-color: var(--color-white);
@@ -47,23 +47,23 @@ h4 {
 }
 
 h1 {
-  font-size: 6.866rem;
+  font-size: 6.104rem;
 }
 
 h2 {
-  font-size: 5.493rem;
+  font-size: 4.883rem;
 }
 
 h3 {
-  font-size: 4.395rem;
+  font-size: 3.906rem;
 }
 
 h4 {
-  font-size: 3.516rem;
+  font-size: 3.125rem;
 }
 
 h5 {
-  font-size: 2.813rem;
+  font-size: 2.5rem;
 }
 
 p {
@@ -77,29 +77,29 @@ p {
   margin: 0 auto 4rem auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
     font-size: 1.6rem;
   }
 
   h1 {
-    font-size: 6.104rem;
+    font-size: 6.866rem;
   }
 
   h2 {
-    font-size: 4.883rem;
+    font-size: 5.493rem;
   }
 
   h3 {
-    font-size: 3.906rem;
+    font-size: 4.395rem;
   }
 
   h4 {
-    font-size: 3.125rem;
+    font-size: 3.516rem;
   }
 
   h5 {
-    font-size: 2.5rem;
+    font-size: 2.813rem;
   }
 }
 

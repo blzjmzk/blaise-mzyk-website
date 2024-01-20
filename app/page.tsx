@@ -33,25 +33,27 @@ const HomePage = () => {
             <Link href="/philosophy" className={styles.customLink}>
               philosopher
             </Link>{" "}
-            (finishing my PhD) and a{" "}
+            (finishing PhD) and a{" "}
             <Link href="/programming" className={styles.customLink}>
               programmer
             </Link>{" "}
             based in Kraków, Poland. Here you can find more information about
             me, as well as my{" "}
-            <Link href="/book-notes" className={styles.customLink}>
+            <Link
+              href="/book-notes"
+              className={`${styles.customLink} ${styles.noWrap}`}
+            >
               book notes
             </Link>
             . I also encourage you to check out my blog.
           </div>
           <button className={`${styles.btnHero} btn btn-primary`}>
             <Link href="/blog" className="link-clear">
-              See My blog
+              Read My blog
             </Link>
           </button>
         </div>
       </div>
-      <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
     </>
   );
 };

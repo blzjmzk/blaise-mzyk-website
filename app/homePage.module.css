@@ -53,6 +53,10 @@
   border-bottom: 1.5px solid var(--color-primary);
 }
 
+.noWrap {
+  white-space: nowrap;
+}
+
 .customLink:hover {
   color: var(--color-primary);
 }
