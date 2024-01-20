@@ -6,7 +6,7 @@ const SideBar = () => {
     <aside className={styles.sidePanel}>
       <ul>
         <li className={styles.sideItem}>
-          <Link href="/blaise/posts" className={styles.sideLink}>
+          <Link href="/blaise" className={styles.sideLink}>
             Add Posts
           </Link>
         </li>
