@@ -74,7 +74,7 @@ p {
   text-align: center;
   font-size: 1.4rem;
   color: rgba(37, 49, 60, 0.59);
-  margin: 0 auto 4rem auto;
+  margin: 2.8rem auto;
 }
 
 @media screen and (min-width: 1024px) {
