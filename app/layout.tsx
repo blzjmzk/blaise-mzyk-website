@@ -26,11 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${nunitoSans.variable} container`}>
+      <body className={`${openSans.variable} ${nunitoSans.variable}`}>
         <header>
           <NavBar />
         </header>
-        <main>{children}</main>
+        <main className="container">{children}</main>
         <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
       </body>
     </html>
