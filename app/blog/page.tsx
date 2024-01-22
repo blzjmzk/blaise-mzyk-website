@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../_components/header";
 import prisma from "@/prisma/client";
 
@@ -9,14 +10,20 @@ const Blog = async () => {
       <Header>Blog</Header>
       <div>
         {posts.map((post) => (
-          <div key={post.id} className="postContainer">
-            <h4>{post.title}</h4>
-            <div className="flex">
-              <p>{post.publishedAt.toDateString()}</p>
-              <p>{post.category}</p>
+          <Link
+            className="link-clear-black"
+            key={post.id}
+            href={`/blog/${post.slug}`}
+          >
+            <div className="postContainer">
+              <h4>{post.title}</h4>
+              <div className="flex">
+                <p>Published: {post.publishedAt.toDateString()}</p>
+                <p>Category: {post.category}</p>
+              </div>
+              <p>{post.description}</p>
             </div>
-            <p>{post.description}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </>
