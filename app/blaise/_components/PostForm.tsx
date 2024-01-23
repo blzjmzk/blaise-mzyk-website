@@ -8,6 +8,10 @@ const PostForm = () => {
         <input id="title" type="text" />
       </div>
       <div className="form-group">
+        <label id="slug">Slug</label>
+        <input id="slug" type="text" />
+      </div>
+      <div className="form-group">
         <label id="category">Category</label>
         <input id="category" type="text" />
       </div>
