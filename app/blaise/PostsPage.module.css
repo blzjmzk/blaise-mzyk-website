@@ -1,0 +1,10 @@
+.Table {
+  border: 1px solid var(--color-black);
+  border-collapse: collapse;
+}
+
+.TableData {
+  border: 1px solid var(--color-black);
+  border-collapse: collapse;
+  padding: 5px;
+}
