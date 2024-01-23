@@ -4,15 +4,11 @@ const PostForm = () => {
   return (
     <form>
       <div className="form-group">
-        <label id="title" for="">
-          Title
-        </label>
+        <label id="title">Title</label>
         <input id="title" type="text" />
       </div>
       <div className="form-group">
-        <label id="category" for="">
-          Category
-        </label>
+        <label id="category">Category</label>
         <input id="category" type="text" />
       </div>
       <div className="form-group">
