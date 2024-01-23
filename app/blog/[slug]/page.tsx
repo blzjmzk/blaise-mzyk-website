@@ -1,6 +1,7 @@
 import Header from "@/app/_components/header";
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   params: { slug: string };
@@ -16,7 +17,9 @@ const PostPage = async ({ params }: Props) => {
   return (
     <div>
       <Header>{post.title}</Header>
-      <div>{post.content}</div>
+      <div>
+        <ReactMarkdown>{post.content}</ReactMarkdown>
+      </div>
     </div>
   );
 };
