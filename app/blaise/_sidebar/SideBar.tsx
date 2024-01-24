@@ -7,17 +7,17 @@ const SideBar = () => {
       <ul>
         <li className={styles.sideItem}>
           <Link href="/blaise" className={styles.sideLink}>
-            Add Posts
+            Posts
           </Link>
         </li>
         <li className={styles.sideItem}>
           <Link href="/blaise/projects" className={styles.sideLink}>
-            Add Projects
+            Projects
           </Link>
         </li>
         <li className={styles.sideItem}>
           <Link href="/blaise/book-notes" className={styles.sideLink}>
-            Add Book Notes
+            Book Notes
           </Link>
         </li>
       </ul>
