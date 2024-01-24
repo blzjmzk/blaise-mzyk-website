@@ -5,7 +5,7 @@ const NewPostPage = () => {
   return (
     <div>
       <h3>Add New Post</h3>
-      <PostForm />;
+      <PostForm />
     </div>
   );
 };
