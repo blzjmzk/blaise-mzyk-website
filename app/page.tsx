@@ -1,8 +1,7 @@
-import React from "react";
-import photo_of_blaise_mzyk from "../public/images/photo_of_blazej_mzyk.jpg";
 import Image from "next/image";
-import styles from "./homePage.module.css";
 import Link from "next/link";
+import photo_of_blaise_mzyk from "../public/images/photo_of_blazej_mzyk.jpg";
+import styles from "./HomePage.module.css";
 
 const HomePage = () => {
   return (

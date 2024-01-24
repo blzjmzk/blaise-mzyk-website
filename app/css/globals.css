@@ -47,23 +47,23 @@ h4 {
 }
 
 h1 {
-  font-size: 6.104rem;
+  font-size: 5.375rem;
 }
 
 h2 {
-  font-size: 4.883rem;
+  font-size: 4.479rem;
 }
 
 h3 {
-  font-size: 3.906rem;
+  font-size: 3.732rem;
 }
 
 h4 {
-  font-size: 3.125rem;
+  font-size: 3.11rem;
 }
 
 h5 {
-  font-size: 2.5rem;
+  font-size: 2.592rem;
 }
 
 p {
@@ -83,23 +83,23 @@ p {
   }
 
   h1 {
-    font-size: 6.866rem;
+    font-size: 6.104rem;
   }
 
   h2 {
-    font-size: 5.493rem;
+    font-size: 4.883rem;
   }
 
   h3 {
-    font-size: 4.395rem;
+    font-size: 3.906px;
   }
 
   h4 {
-    font-size: 3.516rem;
+    font-size: 3.125rem;
   }
 
   h5 {
-    font-size: 2.813rem;
+    font-size: 25rem;
   }
 }
 
@@ -147,14 +147,6 @@ p {
   .btn {
     font-size: 1.6rem;
   }
-}
-
-.postContainer {
-  background-color: var(--color-secondary);
-  margin: 2rem 3.2rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 100px;
 }
 
 .flex {
