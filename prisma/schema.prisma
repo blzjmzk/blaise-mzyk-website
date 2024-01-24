@@ -11,13 +11,13 @@ datasource db {
 }
 
 model Post {
-  id          Int       @id @default(autoincrement())
-  title       String    @db.VarChar(255)
-  slug        String    @unique @db.VarChar(255)
-  category    String    @db.VarChar(30)
-  description String    @db.VarChar(255)
-  content     String    @db.Text
-  isPublished Boolean   @default(true)
-  publishedAt DateTime  @default(now())
-  updatedAt   DateTime? @default(now())
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(255)
+  slug        String   @unique @db.VarChar(255)
+  category    String   @db.VarChar(30)
+  description String   @db.VarChar(255)
+  content     String   @db.Text
+  isPublished Boolean  @default(true)
+  publishedAt DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

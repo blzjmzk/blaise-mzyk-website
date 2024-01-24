@@ -14,7 +14,7 @@
   flex-direction: column;
   max-width: 750px;
   border-radius: var(--border-radius);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./PostsPage.module.css";
 import prisma from "@/prisma/client";
+import formatDate from "../_services/FormatDate";
 
 const PostsPage = async () => {
   const posts = await prisma.post.findMany();
@@ -29,10 +30,10 @@ const PostsPage = async () => {
               <td className={styles.TableData}>{post.title}</td>
               <td className={styles.TableData}>{post.category}</td>
               <td className={styles.TableData}>
-                {post.publishedAt.toDateString()}
+                {formatDate(post.publishedAt.toDateString())}
               </td>
               <td className={styles.TableData}>
-                {post.updatedAt?.toDateString()}
+                {formatDate(post.updatedAt?.toDateString())}
               </td>
               <td className={styles.TableData}>
                 <button>Edit</button>

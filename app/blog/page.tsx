@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "../_components/header";
 import prisma from "@/prisma/client";
 import styles from "./BlogPage.module.css";
+import formatDate from "../_services/FormatDate";
 
 const BlogPage = async () => {
   const posts = await prisma.post.findMany();
@@ -16,15 +17,13 @@ const BlogPage = async () => {
             key={post.id}
             href={`/blog/${post.slug}`}
           >
-            <div className={styles.postAnimate}>
-              <div className={styles.postContainer}>
-                <h2 className={styles.postTitle}>{post.title}</h2>
-                <div className="flex">
-                  <p>Published: {post.publishedAt.toDateString()}</p>
-                  <p>Category: {post.category}</p>
-                </div>
-                <p>{post.description}</p>
+            <div className={styles.postContainer}>
+              <h2 className={styles.postTitle}>{post.title}</h2>
+              <div className="flex">
+                <p>Published: {formatDate(post.publishedAt.toDateString())}</p>
+                <p>Category: {post.category}</p>
               </div>
+              <p>{post.description}</p>
             </div>
           </Link>
         ))}
