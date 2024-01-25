@@ -80,12 +80,19 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navigation}>
-      <Link className={styles.navBrand} href="/" onClick={closeMenu}>
-        <Image
-          src={logo_of_blaise_mzyk}
-          alt="Logo of Blaise Mzyk"
-          width={164}
-        />
+      <Link href="/" onClick={closeMenu}>
+        <div className={styles.navBrand}>
+          <Image
+            src={logo_of_blaise_mzyk}
+            alt="Logo of Blaise Mzyk"
+            // width={164}
+            fill
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </div>
       </Link>
       <ul className={styles.navList}>
         {navLinks.map((navLink) => (

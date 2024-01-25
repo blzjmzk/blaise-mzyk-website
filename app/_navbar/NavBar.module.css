@@ -14,10 +14,17 @@
 
 .navBrand {
   margin-left: 2rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding: 0;
+  width: 164px;
+  height: 24px;
+  /* border: 1px solid red; */
 }
 
 .navMenu {
   margin-right: 2rem;
+  /* border: 1px solid red; */
 }
 
 .navList {
@@ -73,6 +80,7 @@
 
   .navBrand {
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   .navMenu {

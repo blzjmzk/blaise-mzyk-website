@@ -13,7 +13,7 @@ const HomePage = () => {
               src={photo_of_blaise_mzyk}
               alt="Photo of Blaise Mzyk"
               fill
-              // sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
               style={{
                 objectFit: "cover",
                 borderRadius: "var(--border-radius)",
