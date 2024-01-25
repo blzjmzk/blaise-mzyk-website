@@ -38,7 +38,9 @@ const PostsPage = async () => {
                 {formatDate(post.updatedAt?.toDateString())}
               </td>
               <td className={styles.TableData}>
-                <button>Edit</button>
+                <button>
+                  <Link href={`/blaise/edit/${post.slug}`}>Edit</Link>
+                </button>
               </td>
               <td className={styles.TableData}>
                 <button>Delete</button>
