@@ -4,7 +4,9 @@ import prisma from "@/prisma/client";
 import formatDate from "../_services/FormatDate";
 
 const PostsPage = async () => {
-  const posts = await prisma.post.findMany();
+  const posts = await prisma.post.findMany({
+    orderBy: { publishedAt: "desc" },
+  });
 
   return (
     <div>

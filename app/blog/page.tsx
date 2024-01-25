@@ -5,7 +5,9 @@ import styles from "./BlogPage.module.css";
 import formatDate from "../_services/FormatDate";
 
 const BlogPage = async () => {
-  const posts = await prisma.post.findMany();
+  const posts = await prisma.post.findMany({
+    orderBy: { publishedAt: "desc" },
+  });
 
   return (
     <>
