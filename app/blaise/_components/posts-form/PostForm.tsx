@@ -11,6 +11,7 @@ import SimpleMDE from "react-simplemde-editor";
 import { transliterate } from "transliteration";
 import { z } from "zod";
 import styles from "./PostForm.module.css";
+import { SyncLoader } from "react-spinners";
 
 type PostFormData = z.infer<typeof postSchema>;
 
@@ -102,7 +103,12 @@ const PostForm = ({ post }: { post?: Post }) => {
         {errors.content && <p>{errors.content?.message}</p>}
 
         <button disabled={isSubmitting} type="submit">
-          {post ? "Update Post" : "Submit New Post"}
+          <div className="flex">
+            {post ? "Update Post" : "Submit New Post"}
+            {isSubmitting && (
+              <SyncLoader color="#f7f7f7" size={8} speedMultiplier={0.7} />
+            )}
+          </div>
         </button>
       </form>
     </div>
