@@ -1,16 +1,19 @@
 import Header from "@/app/_components/header";
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import ReactMarkdown from "react-markdown";
 
 interface Props {
   params: { slug: string };
 }
 
+const fetchPost = cache((postSlug: string) =>
+  prisma.post.findUnique({ where: { slug: postSlug } })
+);
+
 const PostPage = async ({ params }: Props) => {
-  const post = await prisma.post.findUnique({
-    where: { slug: params.slug },
-  });
+  const post = await fetchPost(params.slug);
 
   if (!post) return notFound();
 
@@ -25,9 +28,7 @@ const PostPage = async ({ params }: Props) => {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const post = await prisma.post.findUnique({
-    where: { slug: params.slug },
-  });
+  const post = await fetchPost(params.slug);
   return {
     title: "Blog | " + post?.title,
     description: post?.description,
