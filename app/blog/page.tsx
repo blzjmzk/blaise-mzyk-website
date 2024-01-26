@@ -1,8 +1,9 @@
+import prisma from "@/prisma/client";
+import { Metadata } from "next";
 import Link from "next/link";
 import Header from "../_components/header";
-import prisma from "@/prisma/client";
-import styles from "./BlogPage.module.css";
 import formatDate from "../_services/FormatDate";
+import styles from "./BlogPage.module.css";
 
 const BlogPage = async () => {
   const posts = await prisma.post.findMany({
@@ -32,6 +33,11 @@ const BlogPage = async () => {
       </div>
     </>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Blaise Mzyk | Blog",
+  description: "Blaise Mzyk blog page ",
 };
 
 export default BlogPage;

@@ -1,7 +1,8 @@
-import Link from "next/link";
-import styles from "./PostsPage.module.css";
 import prisma from "@/prisma/client";
+import { Metadata } from "next";
+import Link from "next/link";
 import formatDate from "../_services/FormatDate";
+import styles from "./PostsPage.module.css";
 
 const PostsPage = async () => {
   const posts = await prisma.post.findMany({
@@ -51,6 +52,11 @@ const PostsPage = async () => {
       </table>
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Blaise Mzyk | Admin Panel",
+  description: "Blaise Mzyk admin panel ",
 };
 
 export default PostsPage;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import photo_of_blaise_mzyk from "../public/images/photo_of_blazej_mzyk.jpg";
 import styles from "./HomePage.module.css";
+import { Metadata } from "next";
 
 const HomePage = () => {
   return (
@@ -55,6 +56,11 @@ const HomePage = () => {
       </div>
     </>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Blaise Mzyk | Homepage",
+  description: "Blaise Mzyk Homepage",
 };
 
 export default HomePage;

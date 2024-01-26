@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../_components/header";
 import SectionHeading from "../_components/section-heading";
+import { Metadata } from "next";
 
 const PhilosophyPage = () => {
   return (
@@ -21,6 +22,10 @@ const PhilosophyPage = () => {
       </div>
     </>
   );
+};
+export const metadata: Metadata = {
+  title: "Blaise Mzyk | Philosophy",
+  description: "Blaise Mzyk philosophy page ",
 };
 
 export default PhilosophyPage;

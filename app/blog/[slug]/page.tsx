@@ -24,4 +24,14 @@ const PostPage = async ({ params }: Props) => {
   );
 };
 
+export async function generateMetadata({ params }: Props) {
+  const post = await prisma.post.findUnique({
+    where: { slug: params.slug },
+  });
+  return {
+    title: "Blog | " + post?.title,
+    description: post?.description,
+  };
+}
+
 export default PostPage;
