@@ -1,0 +1,44 @@
+.button {
+  border-radius: var(--btn-border-radius);
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  min-height: 4rem;
+  padding: 0 1.6rem;
+  min-width: 6.4rem;
+  white-space: nowrap;
+}
+
+.primary {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.primary:hover {
+  background: #4c70ff;
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 0.16rem solid var(--color-primary);
+}
+
+.outline:hover {
+  background: #dcdfe8;
+}
+
+.delete {
+  background: #dc3e42;
+  color: var(--color-white);
+}
+
+.delete:hover {
+  background: #eb8e90;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 1.6rem;
+  }
+}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import photo_of_blaise_mzyk from "../public/images/photo_of_blazej_mzyk.jpg";
 import styles from "./HomePage.module.css";
 import { Metadata } from "next";
+import Button from "./_components/button";
 
 const HomePage = () => {
   return (
@@ -47,11 +48,11 @@ const HomePage = () => {
             </Link>
             . I also encourage you to check out my blog.
           </div>
-          <button className={`${styles.btnHero} btn btn-primary`}>
+          <Button variant={"primary"}>
             <Link href="/blog" className="link-clear">
               Read My blog
             </Link>
-          </button>
+          </Button>
         </div>
       </div>
     </>

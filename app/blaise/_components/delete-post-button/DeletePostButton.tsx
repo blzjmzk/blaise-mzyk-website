@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/app/_components/button";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -18,7 +19,11 @@ const DeletePostButton = ({ postSlug }: { postSlug: string }) => {
       setError(true);
     }
   };
-  return <button onClick={deletePost}>Delete</button>;
+  return (
+    <Button variant="delete" onClick={deletePost}>
+      Delete
+    </Button>
+  );
 };
 
 export default DeletePostButton;

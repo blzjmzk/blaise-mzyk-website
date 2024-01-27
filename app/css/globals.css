@@ -103,36 +103,7 @@ p {
   }
 }
 
-/* BUTTONS */
-.btn {
-  border-radius: var(--btn-border-radius);
-  border: 0;
-  cursor: pointer;
-  outline: 0;
-  height: 4rem;
-  padding: 0 1.6rem;
-  min-width: 6.4rem;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  color: var(--color-white);
-  background: var(--color-primary);
-}
-
-.btn-primary:hover {
-  background: #4c70ff;
-}
-
-.btn-outline {
-  background: var(--color-white);
-  color: var(--color-primary);
-  border: 1.5px solid var(--color-primary);
-}
-
-.btn-outline:hover {
-  background: #dcdfe8;
-}
+/* UTILITIES */
 
 .link-clear {
   color: var(--color-white);
@@ -141,12 +112,6 @@ p {
 .link-clear-black {
   color: var(--color-black);
   text-decoration: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .btn {
-    font-size: 1.6rem;
-  }
 }
 
 .flex {

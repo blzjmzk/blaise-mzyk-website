@@ -7,6 +7,7 @@ import { useState } from "react";
 import formatDate from "../_services/FormatDate";
 import styles from "./PostsPage.module.css";
 import DeletePostButton from "./_components/delete-post-button/DeletePostButton";
+import Button from "../_components/button";
 
 const PostsPage = async () => {
   const posts = await prisma.post.findMany({
@@ -15,9 +16,11 @@ const PostsPage = async () => {
 
   return (
     <div>
-      <button>
-        <Link href="/blaise/new-post">Add New Post</Link>
-      </button>
+      <Button variant="primary">
+        <Link href="/blaise/new-post" className="link-clear">
+          Add New Post
+        </Link>
+      </Button>
       <table className={styles.Table}>
         <thead>
           <tr>
@@ -43,9 +46,14 @@ const PostsPage = async () => {
                 {formatDate(post.updatedAt?.toDateString())}
               </td>
               <td className={styles.TableData}>
-                <button>
-                  <Link href={`/blaise/edit/${post.slug}`}>Edit</Link>
-                </button>
+                <Button variant="primary">
+                  <Link
+                    className="link-clear"
+                    href={`/blaise/edit/${post.slug}`}
+                  >
+                    Edit
+                  </Link>
+                </Button>
               </td>
               <td className={styles.TableData}>
                 <DeletePostButton postSlug={post.slug} />

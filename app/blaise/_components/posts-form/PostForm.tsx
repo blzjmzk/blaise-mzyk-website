@@ -12,6 +12,7 @@ import { transliterate } from "transliteration";
 import { z } from "zod";
 import styles from "./PostForm.module.css";
 import { SyncLoader } from "react-spinners";
+import Button from "@/app/_components/button";
 
 type PostFormData = z.infer<typeof postSchema>;
 
@@ -102,14 +103,14 @@ const PostForm = ({ post }: { post?: Post }) => {
         </div>
         {errors.content && <p>{errors.content?.message}</p>}
 
-        <button disabled={isSubmitting} type="submit">
-          <div className="flex">
+        <Button variant="primary" disabled={isSubmitting} type="submit">
+          <div className={styles.flexButton}>
             {post ? "Update Post" : "Submit New Post"}
             {isSubmitting && (
-              <SyncLoader color="#f7f7f7" size={8} speedMultiplier={0.7} />
+              <SyncLoader color="#f7f7f7" size={7} speedMultiplier={0.7} />
             )}
           </div>
-        </button>
+        </Button>
       </form>
     </div>
   );

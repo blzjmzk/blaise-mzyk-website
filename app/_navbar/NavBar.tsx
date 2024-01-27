@@ -1,12 +1,13 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import styles from "./NavBar.module.css";
-import Image from "next/image";
-import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
-import MenuButton from "./menu-button/menuButton";
-import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
+import Button from "../_components/button";
+import styles from "./NavBar.module.css";
+import MenuButton from "./menu-button/menuButton";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +86,6 @@ const NavBar = () => {
           <Image
             src={logo_of_blaise_mzyk}
             alt="Logo of Blaise Mzyk"
-            // width={164}
             fill
             sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             style={{
@@ -113,7 +113,7 @@ const NavBar = () => {
         <div className={styles.hidden}>
           <motion.li variants={menuLinkVars} className={styles.navItem}>
             <Link href="/blog" className={styles.navLink} onClick={closeMenu}>
-              <button className="btn btn-outline">Blog</button>
+              <Button variant="outline">Blog</Button>
             </Link>
           </motion.li>
         </div>
@@ -165,7 +165,7 @@ const NavBar = () => {
                     className={styles.navLink}
                     onClick={closeMenu}
                   >
-                    <button className="btn btn-outline">Blog</button>
+                    <Button variant="outline">Blog</Button>
                   </Link>
                 </motion.li>
               </div>
