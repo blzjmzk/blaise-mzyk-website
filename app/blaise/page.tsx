@@ -43,7 +43,9 @@ const PostsPage = async () => {
                 {formatDate(post.publishedAt.toDateString())}
               </td>
               <td className={styles.TableData}>
-                {formatDate(post.updatedAt?.toDateString())}
+                {post.updatedAt.toISOString() === post.publishedAt.toISOString()
+                  ? ""
+                  : formatDate(post.updatedAt.toDateString())}
               </td>
               <td className={styles.TableData}>
                 <Button variant="primary">
