@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -15,7 +15,7 @@ model Post {
   title       String   @db.VarChar(255)
   slug        String   @unique @db.VarChar(255)
   category    String   @db.VarChar(30)
-  description String   @db.VarChar(255)
+  description String   @db.Text
   content     String   @db.Text
   isPublished Boolean  @default(true)
   publishedAt DateTime @default(now())
