@@ -3,6 +3,7 @@ import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import ReactMarkdown from "react-markdown";
+import styles from "./PostPage.module.css";
 
 interface Props {
   params: { slug: string };
@@ -18,12 +19,12 @@ const PostPage = async ({ params }: Props) => {
   if (!post) return notFound();
 
   return (
-    <div>
+    <>
       <Header>{post.title}</Header>
-      <div>
+      <div className={styles.postContainer}>
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
-    </div>
+    </>
   );
 };
 

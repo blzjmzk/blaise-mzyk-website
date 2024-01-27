@@ -41,29 +41,17 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: var(--font-nunito-sans);
 }
 
-h1 {
-  font-size: 5.375rem;
-}
-
 h2 {
-  font-size: 4.479rem;
+  font-size: 2.813rem;
+  margin: 3.2rem 0 0.4rem 0;
 }
 
 h3 {
-  font-size: 3.732rem;
-}
-
-h4 {
-  font-size: 3.11rem;
-}
-
-h5 {
-  font-size: 2.592rem;
+  font-size: 22.5rem;
 }
 
 p {
@@ -77,34 +65,21 @@ p {
   margin: 2.8rem auto;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 1.6rem;
   }
 
-  h1 {
-    font-size: 6.104rem;
-  }
-
   h2 {
-    font-size: 4.883rem;
-  }
-
-  h3 {
     font-size: 3.906rem;
   }
 
-  h4 {
+  h3 {
     font-size: 3.125rem;
-  }
-
-  h5 {
-    font-size: 2.5rem;
   }
 }
 
 /* UTILITIES */
-
 .link-clear {
   color: var(--color-white);
   text-decoration: none;

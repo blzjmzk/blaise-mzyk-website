@@ -1,25 +1,16 @@
 .headerContainer {
-  position: relative;
   background-color: var(--color-secondary);
-  min-height: 10rem;
-  max-width: 1160px;
 }
 
 .headerText {
-  position: absolute;
-  top: -0.4rem;
-  left: 3.2rem;
+  padding: 1.2rem 1.6rem 2.4rem 3.2rem;
   font-size: 3.516rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .headerContainer {
-    min-height: 16rem;
-  }
-
   .headerText {
     font-size: 4.883rem;
-    top: 0.8rem;
-    left: 4rem;
+    padding: 1.2rem 2rem 2.4rem 4rem;
   }
 }
