@@ -1,8 +1,12 @@
 import prisma from "@/prisma/client";
+import axios from "axios";
 import { Metadata } from "next";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import formatDate from "../_services/FormatDate";
 import styles from "./PostsPage.module.css";
+import DeletePostButton from "./_components/delete-post-button/DeletePostButton";
 
 const PostsPage = async () => {
   const posts = await prisma.post.findMany({
@@ -44,7 +48,7 @@ const PostsPage = async () => {
                 </button>
               </td>
               <td className={styles.TableData}>
-                <button>Delete</button>
+                <DeletePostButton postSlug={post.slug} />
               </td>
             </tr>
           ))}
