@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.postPageNavbar {
+  background: white;
+}
+
 .navBrand {
   margin-left: 2rem;
   margin-bottom: 0.4rem;

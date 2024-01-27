@@ -13,6 +13,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const currentPath = usePathname();
+  const isPostPage = currentPath.includes("/blog/");
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -80,7 +81,11 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={styles.navigation}>
+    <nav
+      className={`${styles.navigation} ${
+        isPostPage ? styles.postPageNavbar : ""
+      }`}
+    >
       <Link href="/" onClick={closeMenu}>
         <div className={styles.navBrand}>
           <Image
