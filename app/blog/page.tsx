@@ -22,9 +22,19 @@ const BlogPage = async () => {
           >
             <div className={styles.postContainer}>
               <h2 className={styles.postTitle}>{post.title}</h2>
-              <div className="flex">
-                <p>Published: {formatDate(post.publishedAt.toDateString())}</p>
-                <p>Category: {post.category}</p>
+              <div className={styles.postPropertiesContainer}>
+                <div>
+                  <span className={styles.postProperties}>Published:</span>{" "}
+                  <span className={styles.postPublishedValue}>
+                    {formatDate(post.publishedAt.toDateString())}
+                  </span>
+                </div>
+                <div>
+                  <span className={styles.postProperties}>Category:</span>{" "}
+                  <span className={styles.postPublishedValue}>
+                    {post.category}
+                  </span>
+                </div>
               </div>
               <p>{post.description}</p>
             </div>

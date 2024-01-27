@@ -23,6 +23,37 @@
   transform: scale(1.05);
 }
 
+.postPropertiesContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0 0 1.2rem 0;
+}
+
 .postTitle {
   font-size: 2.592rem;
+  margin: 0 0 0.8rem 0;
+}
+
+.postProperties {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.postPublishedValue {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .postTitle {
+    font-size: 2.765rem;
+  }
+
+  .postProperties {
+    font-size: 1.333rem;
+  }
+
+  .postPublishedValue {
+    font-size: 1.333rem;
+  }
 }
