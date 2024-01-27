@@ -31,3 +31,25 @@ export async function PATCH(
 
   return NextResponse.json(updatedIssue);
 }
+
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: { slug: string } }
+) {
+  //fetchujemy post z danym slug
+  const post = await prisma?.post.findUnique({
+    where: { slug: params.slug },
+  });
+
+  //jeśli nie istnieje błąd
+  if (!post)
+    return NextResponse.json({ error: "Invalid post" }, { status: 404 });
+
+  //jeśli istnieje usuwamy
+  await prisma.post.delete({
+    where: { slug: post.slug },
+  });
+
+  //zwracamy empty res klientowi
+  return NextResponse.json({});
+}
