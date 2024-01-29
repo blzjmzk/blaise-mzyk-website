@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "../_components/header";
 
 const BookNotesPage = () => {
-  return <Header>Book Notes</Header>;
+  return <Header>My Book Notes</Header>;
 };
 
 export const metadata: Metadata = {
