@@ -1,4 +1,3 @@
-import React from "react";
 import PostForm from "../_components/posts-form/PostForm";
 
 const NewPostPage = () => {

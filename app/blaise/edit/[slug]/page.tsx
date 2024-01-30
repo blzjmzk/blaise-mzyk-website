@@ -7,7 +7,7 @@ interface Props {
   params: { slug: string };
 }
 
-const EditIssuePage = async ({ params }: Props) => {
+const EditPostPage = async ({ params }: Props) => {
   const post = await prisma.post.findUnique({
     where: { slug: params.slug },
   });
@@ -17,4 +17,4 @@ const EditIssuePage = async ({ params }: Props) => {
   return <PostForm post={post} />;
 };
 
-export default EditIssuePage;
+export default EditPostPage;

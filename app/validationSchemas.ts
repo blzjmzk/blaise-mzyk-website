@@ -38,6 +38,9 @@ export const patchPostSchema = z.object({
 //BOOK NOTES
 export const bookNoteSchema = z.object({
   title: z.string().min(1, "Title is required.").max(255),
+  author: z.string().min(1, "Author is required.").max(255),
+  year: z.string().min(1, "Year is required.").max(4),
+  cover: z.string().min(1, "Year is required.").max(255),
   slug: z
     .string()
     .min(1, "Slug is required.")
@@ -53,6 +56,9 @@ export const bookNoteSchema = z.object({
 
 export const patchBookNoteSchema = z.object({
   title: z.string().min(1, "Title is required.").max(255).optional(),
+  author: z.string().min(1, "Author is required.").max(255).optional(),
+  year: z.string().min(1, "Year is required.").max(4).optional(),
+  cover: z.string().min(1, "Year is required.").max(255).optional(),
   slug: z
     .string()
     .min(1, "Slug is required.")
