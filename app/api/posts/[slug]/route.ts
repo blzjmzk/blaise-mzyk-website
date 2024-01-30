@@ -18,7 +18,7 @@ export async function PATCH(
   if (!post)
     return NextResponse.json({ error: "Invalid post" }, { status: 404 });
 
-  const updatedIssue = await prisma?.post.update({
+  const updatedPost = await prisma?.post.update({
     where: { slug: post.slug },
     data: {
       title: body.title,
@@ -29,7 +29,7 @@ export async function PATCH(
     },
   });
 
-  return NextResponse.json(updatedIssue);
+  return NextResponse.json(updatedPost);
 }
 
 export async function DELETE(
