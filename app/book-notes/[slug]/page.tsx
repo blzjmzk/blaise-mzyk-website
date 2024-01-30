@@ -27,7 +27,7 @@ const BookNotePage = async ({ params }: Props) => {
       <p className={styles.bookNoteContainer}>{bookNote.description}</p>
       <SectionHeading>Highlights</SectionHeading>
       <div className={styles.bookNoteContainer}>
-        <ReactMarkdown>{bookNote.significantThoughts}</ReactMarkdown>
+        <ReactMarkdown>{bookNote.highlights}</ReactMarkdown>
       </div>
       <SectionHeading>Thoughts</SectionHeading>
       <div className={styles.bookNoteContainer}>

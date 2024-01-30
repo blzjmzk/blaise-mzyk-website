@@ -23,14 +23,14 @@ model Post {
 }
 
 model BookNote {
-  id                  Int      @id @default(autoincrement())
-  title               String   @db.VarChar(255)
-  author              String   @db.VarChar(255)
-  year                String   @db.VarChar(255)
-  cover               String   @db.VarChar(255)
-  slug                String   @unique @db.VarChar(255)
-  description         String   @db.Text
-  significantThoughts String   @db.Text
-  thoughts            String   @db.Text
-  publishedAt         DateTime @default(now())
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(255)
+  author      String   @db.VarChar(255)
+  year        String   @db.VarChar(255)
+  cover       String   @db.VarChar(255)
+  slug        String   @unique @db.VarChar(255)
+  description String   @db.Text
+  highlights  String   @db.Text
+  thoughts    String   @db.Text
+  publishedAt DateTime @default(now())
 }
