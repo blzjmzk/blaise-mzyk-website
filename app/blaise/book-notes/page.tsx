@@ -12,8 +12,9 @@ const BookNotePage = async () => {
   });
 
   return (
-    <div>
-      <Button variant="primary">
+    <div className={styles.BookNotesPage}>
+      <h2>Book Notes</h2>
+      <Button variant="primary" width="25rem">
         <Link href="/blaise/book-notes/new-book-note" className="link-clear">
           Add New Book Note
         </Link>

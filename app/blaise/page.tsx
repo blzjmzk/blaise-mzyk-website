@@ -12,8 +12,9 @@ const PostsPage = async () => {
   });
 
   return (
-    <div>
-      <Button variant="primary">
+    <div className={styles.PostsPage}>
+      <h2>Posts</h2>
+      <Button variant="primary" width="25rem">
         <Link href="/blaise/new-post" className="link-clear">
           Add New Post
         </Link>

@@ -3,7 +3,7 @@ import PostForm from "../_components/posts-form/PostForm";
 const NewPostPage = () => {
   return (
     <div>
-      <h3>Add New Post</h3>
+      <h2>Add New Post</h2>
       <PostForm />
     </div>
   );
