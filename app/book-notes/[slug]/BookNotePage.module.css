@@ -1,0 +1,10 @@
+.bookNoteContainer {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .bookNoteContainer {
+    padding: 0;
+  }
+}
