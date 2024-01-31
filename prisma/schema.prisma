@@ -34,3 +34,17 @@ model BookNote {
   thoughts    String   @db.Text
   publishedAt DateTime @default(now())
 }
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  order       Int
+  image       String   @db.VarChar(255)
+  title       String   @db.VarChar(255)
+  type        String   @db.VarChar(30)
+  description String   @db.Text
+  features    String   @db.Text
+  codeLink    String?  @db.VarChar(255)
+  liveLink    String?  @db.VarChar(255)
+  designLink  String?  @db.VarChar(255)
+  publishedAt DateTime @default(now())
+}

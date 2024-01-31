@@ -1,0 +1,50 @@
+.projectContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectImage {
+  width: 22rem;
+  height: 34rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectTitle {
+}
+
+.projectDescription {
+  margin-bottom: -1rem;
+}
+
+.projectFeatures {
+  margin-top: -1rem;
+}
+
+.projectDetailsButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .projectContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .projectImage {
+  }
+  .projectDetails {
+    max-width: 400px;
+  }
+}
