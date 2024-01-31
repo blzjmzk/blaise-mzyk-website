@@ -19,29 +19,37 @@ const BookNotePage = async () => {
           Add New Book Note
         </Link>
       </Button>
-      <table className={styles.Table}>
+      <table className={styles.table}>
         <thead>
           <tr>
-            <th className={styles.TableData}>Id</th>
-            <th className={styles.TableData}>Title</th>
-            <th className={styles.TableData}>Author</th>
-            <th className={styles.TableData}>Year</th>
-            <th className={styles.TableData}>Publishing Time</th>
-            <th className={styles.TableData}>Edit</th>
-            <th className={styles.TableData}>Delete</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Id
+            </th>
+            <th className={styles.tableData}>Title</th>
+            <th className={styles.tableData}>Author</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Year
+            </th>
+            <th className={styles.tableData}>Publishing Time</th>
+            <th className={styles.tableData}>Edit</th>
+            <th className={styles.tableData}>Delete</th>
           </tr>
         </thead>
         <tbody>
           {bookNotes.map((bookNote) => (
             <tr key={bookNote.id}>
-              <td className={styles.TableData}>{bookNote.id}</td>
-              <td className={styles.TableData}>{bookNote.title}</td>
-              <td className={styles.TableData}>{bookNote.author}</td>
-              <td className={styles.TableData}>{bookNote.year}</td>
-              <td className={styles.TableData}>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
+                {bookNote.id}
+              </td>
+              <td className={styles.tableData}>{bookNote.title}</td>
+              <td className={styles.tableData}>{bookNote.author}</td>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
+                {bookNote.year}
+              </td>
+              <td className={styles.tableData}>
                 {formatDate(bookNote.publishedAt.toDateString())}
               </td>
-              <td className={styles.TableData}>
+              <td className={styles.tableData}>
                 <Button variant="primary">
                   <Link
                     className="link-clear"
@@ -51,7 +59,7 @@ const BookNotePage = async () => {
                   </Link>
                 </Button>
               </td>
-              <td className={styles.TableData}>
+              <td className={styles.tableData}>
                 <DeleteBookNoteButton bookNoteSlug={bookNote.slug} />
               </td>
             </tr>

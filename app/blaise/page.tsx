@@ -19,33 +19,39 @@ const PostsPage = async () => {
           Add New Post
         </Link>
       </Button>
-      <table className={styles.Table}>
+      <table className={styles.table}>
         <thead>
           <tr>
-            <th className={styles.TableData}>Id</th>
-            <th className={styles.TableData}>Title</th>
-            <th className={styles.TableData}>Category</th>
-            <th className={styles.TableData}>Publishing Time</th>
-            <th className={styles.TableData}>Updated Time</th>
-            <th className={styles.TableData}>Edit</th>
-            <th className={styles.TableData}>Delete</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Id
+            </th>
+            <th className={styles.tableData}>Title</th>
+            <th className={styles.tableData}>Category</th>
+            <th className={styles.tableData}>Publishing Time</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Updated Time
+            </th>
+            <th className={styles.tableData}>Edit</th>
+            <th className={styles.tableData}>Delete</th>
           </tr>
         </thead>
         <tbody>
           {posts.map((post) => (
             <tr key={post.id}>
-              <td className={styles.TableData}>{post.id}</td>
-              <td className={styles.TableData}>{post.title}</td>
-              <td className={styles.TableData}>{post.category}</td>
-              <td className={styles.TableData}>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
+                {post.id}
+              </td>
+              <td className={styles.tableData}>{post.title}</td>
+              <td className={styles.tableData}>{post.category}</td>
+              <td className={styles.tableData}>
                 {formatDate(post.publishedAt.toDateString())}
               </td>
-              <td className={styles.TableData}>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
                 {post.updatedAt.toISOString() === post.publishedAt.toISOString()
                   ? ""
                   : formatDate(post.updatedAt.toDateString())}
               </td>
-              <td className={styles.TableData}>
+              <td className={styles.tableData}>
                 <Button variant="primary">
                   <Link
                     className="link-clear"
@@ -55,7 +61,7 @@ const PostsPage = async () => {
                   </Link>
                 </Button>
               </td>
-              <td className={styles.TableData}>
+              <td className={styles.tableData}>
                 <DeletePostButton postSlug={post.slug} />
               </td>
             </tr>
