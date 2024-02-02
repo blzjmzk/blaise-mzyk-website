@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito_Sans, Open_Sans } from "next/font/google";
 import NavBar from "./_navbar";
 import "./css/globals.css";
+import AuthProvider from "./auth/Provider";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${nunitoSans.variable}`}>
-        <header>
-          <NavBar />
-        </header>
-        <main className="container">{children}</main>
-        <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
+        <AuthProvider>
+          <header>
+            <NavBar />
+          </header>
+          <main className="container">{children}</main>
+          <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -2,21 +2,24 @@
   margin: 0 auto;
 }
 
-.adminPanel {
+.adminPanelHeader {
+}
+
+.adminPanelList {
+  margin: 0 0 0 -3.6rem;
   display: flex;
-  gap: 1.6rem;
-  margin-left: -3.6rem;
+  gap: 2rem;
 }
 
 .adminItem {
   list-style: none;
   text-wrap: nowrap;
-  font-size: 2rem;
 }
 
 .adminLink {
   text-decoration: none;
   color: var(--color-black);
+  font-size: 2rem;
 }
 
 .adminLink:hover {
@@ -24,7 +27,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .adminItem {
-    font-size: 3rem;
+  .adminLink {
+    font-size: 3.125rem;
   }
 }
