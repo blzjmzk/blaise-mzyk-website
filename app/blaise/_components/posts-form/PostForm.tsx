@@ -1,18 +1,22 @@
 "use client";
+import Button from "@/app/_components/button";
 import { postSchema } from "@/app/validationSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Post } from "@prisma/client";
 import axios from "axios";
 import "easymde/dist/easymde.min.css";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import SimpleMDE from "react-simplemde-editor";
+import { SyncLoader } from "react-spinners";
 import { transliterate } from "transliteration";
 import { z } from "zod";
 import styles from "./PostForm.module.css";
-import { SyncLoader } from "react-spinners";
-import Button from "@/app/_components/button";
+
+const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
+  ssr: false,
+});
 
 type PostFormData = z.infer<typeof postSchema>;
 

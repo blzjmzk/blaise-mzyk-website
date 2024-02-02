@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 68rem;
+}
+
+.formInput {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: 0;
+}
+.formInput:focus {
+  border-color: #7db0fb;
+  box-shadow: 0 0 0 4px #b9d3fa;
+}
+
+.flexButton {
+  display: flex;
+  padding: 1rem 0;
+  gap: 2rem;
+  justify-content: center;
+}

@@ -77,7 +77,10 @@ export const patchBookNoteSchema = z.object({
 //PROJECTS
 export const projectSchema = z.object({
   title: z.string().min(1, "Title is required.").max(255),
-  order: z.number().min(1, "Order is required.").max(2),
+  order: z
+    .string()
+    .min(1, "Order is required.")
+    .max(2, "Order should be from 1-99"),
   type: z.string().min(1, "Type is required.").max(255),
   image: z.string().min(1, "Image is required.").max(255),
   codeLink: z.string().max(255).optional(),
@@ -89,12 +92,12 @@ export const projectSchema = z.object({
 
 export const patchProjectSchema = z.object({
   title: z.string().min(1, "Title is required.").max(255).optional(),
-  order: z.number().min(1, "Order is required.").max(2).optional(),
+  order: z.string().min(1, "Order is required.").max(2).optional(),
   type: z.string().min(1, "Type is required.").max(255).optional(),
   image: z.string().min(1, "Image is required.").max(255).optional(),
-  codeLink: z.string().max(255).optional(),
-  liveLink: z.string().max(255).optional(),
-  designLink: z.string().max(255).optional(),
+  codeLink: z.string().min(1, "code link is required.").max(255).optional(),
+  liveLink: z.string().min(1, "live link is required.").max(255).optional(),
+  designLink: z.string().min(1, "design link is required.").max(255).optional(),
   description: z
     .string()
     .min(1, "Description is required")

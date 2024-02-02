@@ -5,6 +5,7 @@ import Button from "../../_components/button";
 import formatDate from "../../_services/FormatDate";
 import styles from "./ProjectsPage.module.css";
 import DeleteBookNoteButton from "../_components/delete-book-note-button/DeleteBookNoteButton";
+import DeleteProjectButton from "../_components/delete-project-button/DeleteProjectButton";
 
 const ProjectsPage = async () => {
   const projects = await prisma.project.findMany({
@@ -58,7 +59,7 @@ const ProjectsPage = async () => {
                 </Button>
               </td>
               <td className={styles.tableData}>
-                <DeleteBookNoteButton projectId={project.id} />
+                <DeleteProjectButton projectId={project.id} />
               </td>
             </tr>
           ))}

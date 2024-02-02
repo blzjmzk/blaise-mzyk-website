@@ -37,7 +37,7 @@ model BookNote {
 
 model Project {
   id          Int      @id @default(autoincrement())
-  order       Int
+  order       String   @unique @db.VarChar(255)
   image       String   @db.VarChar(255)
   title       String   @db.VarChar(255)
   type        String   @db.VarChar(30)

@@ -1,4 +1,11 @@
-import BookNotesForm from "../../_components/book-notes-form";
+import dynamic from "next/dynamic";
+
+const BookNotesForm = dynamic(
+  () => import("@/app/blaise/_components/book-notes-form/BookNotesForm"),
+  {
+    ssr: false,
+  }
+);
 
 const NewBookNotePage = () => {
   return (

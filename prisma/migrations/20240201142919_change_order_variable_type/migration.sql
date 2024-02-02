@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Project" ALTER COLUMN "order" SET DATA TYPE TEXT;
