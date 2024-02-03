@@ -21,7 +21,7 @@ type ProjectFormData = z.infer<typeof projectSchema>;
 
 const ProjectForm = ({ project }: { project?: Project }) => {
   const router = useRouter();
-  
+
   const [error, setError] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
 
@@ -77,6 +77,15 @@ const ProjectForm = ({ project }: { project?: Project }) => {
           type="text"
           {...register("type")}
           placeholder="Add project type..."
+        />
+        {errors.type && <p>{errors.type?.message}</p>}
+        <input
+          id="image"
+          className={styles.formInput}
+          defaultValue={project?.image}
+          type="text"
+          {...register("image")}
+          placeholder="Add project image..."
         />
         {errors.type && <p>{errors.type?.message}</p>}
         <input
