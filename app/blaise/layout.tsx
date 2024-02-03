@@ -10,36 +10,36 @@ const AdminLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header>
-        <h2 className={styles.adminPanelHeader}>Admin Panel</h2>
+        <span className={styles.adminPanelHeader}>Admin Panel</span>
         <ul className={styles.adminPanelList}>
           <li className={styles.adminItem}>
-            <h3>
+            <span>
               <Link href="/blaise" className={styles.adminLink}>
                 Posts
               </Link>
-            </h3>
+            </span>
           </li>
           <li className={styles.adminItem}>
-            <h3>
+            <span>
               <Link href="/blaise/projects" className={styles.adminLink}>
                 Projects
               </Link>
-            </h3>
+            </span>
           </li>
           <li className={styles.adminItem}>
-            <h3>
+            <span>
               <Link href="/blaise/book-notes" className={styles.adminLink}>
                 Book Notes
               </Link>
-            </h3>
+            </span>
           </li>
           {status === "authenticated" && (
             <li className={styles.adminItem}>
-              <h3>
+              <span>
                 <Link href="/api/auth/signout" className={styles.adminLink}>
                   Sign Out
                 </Link>
-              </h3>
+              </span>
             </li>
           )}
         </ul>
