@@ -29,6 +29,35 @@
   color: var(--color-primary);
 }
 
+.profilesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.philpeopleImage {
+  position: relative;
+  width: 14rem;
+  height: 18rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.philpeopleImage:hover {
+  transform: scale(1.1);
+}
+
+.googleScholarImage {
+  position: relative;
+  width: 26rem;
+  height: 16rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.googleScholarImage:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (min-width: 768px) {
   .publicationsContainer {
     padding-left: 1.2rem;
@@ -36,5 +65,11 @@
 
   .talksList {
     padding-left: 6rem;
+  }
+
+  .profilesContainer {
+    flex-direction: row;
+    padding-left: 4rem;
+    gap: 3.2rem;
   }
 }

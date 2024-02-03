@@ -5,6 +5,9 @@ import { Metadata } from "next";
 import prisma from "@/prisma/client";
 import styles from "./PhilosophyPage.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import logo_google_scholar from "../../public/images/logo-google-scholar.png";
+import logo_philpeople from "../../public/images/logo-philpeople.png";
 
 const PhilosophyPage = async () => {
   const publications = await prisma?.publication.findMany({
@@ -88,6 +91,40 @@ const PhilosophyPage = async () => {
         ))}
       </ul>
       <SectionHeading>See Also My Profiles at:</SectionHeading>
+      <div className={styles.profilesContainer}>
+        <Link
+          href={"https://philpeople.org/profiles/blazej-mzyk"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.philpeopleImage}
+        >
+          <Image
+            src={logo_philpeople}
+            alt="PhilPeople logo"
+            fill
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </Link>
+        <Link
+          href="https://scholar.google.com/citations?user=PF86w3oAAAAJ&hl="
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.googleScholarImage}
+        >
+          <Image
+            src={logo_google_scholar}
+            alt="Google Scholar logo"
+            fill
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </Link>
+      </div>
     </>
   );
 };
