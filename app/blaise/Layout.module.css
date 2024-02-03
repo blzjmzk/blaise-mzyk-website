@@ -3,10 +3,13 @@
 }
 
 .adminPanelHeader {
+  margin: 0;
 }
 
 .adminPanelList {
-  margin: 0 0 0 -3.6rem;
+  margin: 0;
+  padding: 0;
+  height: 6rem;
   display: flex;
   gap: 2rem;
 }
