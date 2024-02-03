@@ -3,7 +3,7 @@
 }
 
 .headerText {
-  padding: 1.2rem 1.6rem 2.4rem 3.2rem;
+  padding: 2rem 1.6rem 3.2rem 3.2rem;
   font-size: 3.516rem;
   margin: 0;
 }
@@ -11,6 +11,6 @@
 @media screen and (min-width: 768px) {
   .headerText {
     font-size: 4.883rem;
-    padding: 1.2rem 2rem 2.4rem 4rem;
+    padding: 3.2rem 2rem 4.8rem 4rem;
   }
 }
