@@ -2,24 +2,79 @@ import React from "react";
 import Header from "../_components/header";
 import SectionHeading from "../_components/section-heading";
 import { Metadata } from "next";
+import prisma from "@/prisma/client";
+import styles from "./PhilosophyPage.module.css";
+import Link from "next/link";
 
-const PhilosophyPage = () => {
+const PhilosophyPage = async () => {
+  const publications = await prisma?.publication.findMany({
+    orderBy: { year: "desc" },
+  });
+  
   return (
     <>
       <Header>Philosophy</Header>
       <SectionHeading>My Publications</SectionHeading>
+      <div className={styles.publicationsContainer}>
+        <div>
+          I publish under the name &quot;Błażej Mzyk&quot;, which is the Polish
+          form of my first and last name. Clicking on the title of a publication
+          will take you to a page where you can download it in open access (if
+          available).
+        </div>
+        <ul className={styles.projectsContainer}>
+          <li className={styles.listItem}>
+            {`Mzyk, B. Non-Maximalism Reconsidered: Truthmaking and the Dependence
+          of Truths on Being. `}
+            <span className={styles.italic}>Filozofia Nauki</span>
+            {`. Forthcoming`}
+          </li>
+          {publications.map((publication) => {
+            if (publication.type === "paper") {
+              return (
+                <li key={publication.id} className={styles.listItem}>
+                  {`Mzyk, B. (${publication.year}). `}
+                  <Link
+                    href={publication.link || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.customLink}
+                  >
+                    {publication.title}
+                  </Link>{" "}
+                  <span className={styles.italic}>
+                    {publication.journalName}
+                  </span>
+                  {`, ${publication.journalIssue}. `}
+                  {publication.doiLink && `${publication.doiLink}`}
+                  {publication.language === "polish" && ` [in Polish]`}
+                </li>
+              );
+            } else {
+              return (
+                <li key={publication.id} className={styles.listItem}>
+                  {`Mzyk, B. (${publication.year}). `}
+                  <Link
+                    href={publication.link || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.customLink}
+                  >
+                    {publication.title}
+                  </Link>
+                  {`. In ${publication.bookEditors} (Eds.), `}
+                  <span className={styles.italic}>{publication.bookName}</span>
+                  {` (pp.${publication.bookPages}). ${publication.bookPublisher}.`}
+                  {publication.language === "polish" && ` [in Polish]`}
+                </li>
+              );
+            }
+          })}
+        </ul>
+      </div>
+
       <SectionHeading>My Talks</SectionHeading>
       <SectionHeading>See Also My Profiles at:</SectionHeading>
-      <div>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-      </div>
     </>
   );
 };

@@ -1,0 +1,22 @@
+.italic {
+  font-style: italic;
+}
+
+.publicationsContainer {
+  max-width: 68rem;
+  /* margin: 0 auto; */
+  padding-left: 3.2rem;
+}
+.listItem {
+  padding: 0.4rem 0;
+}
+
+.customLink {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .publicationsContainer {
+    padding-left: 4rem;
+  }
+}

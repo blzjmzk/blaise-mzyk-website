@@ -49,6 +49,31 @@ model Project {
   publishedAt DateTime @default(now())
 }
 
+model Publication {
+  id            Int     @id @default(autoincrement())
+  type          String  @db.VarChar(255)
+  language      String  @db.VarChar(255)
+  year          String  @db.VarChar(255)
+  title         String  @db.VarChar(255)
+  journalName   String? @db.VarChar(255)
+  journalIssue  String? @db.VarChar(255)
+  bookName      String? @db.VarChar(255)
+  bookEditors   String? @db.VarChar(255)
+  bookPages     String? @db.VarChar(255)
+  bookPublisher String? @db.VarChar(255)
+  doiLink       String? @db.VarChar(255)
+  link          String? @db.Text
+}
+
+model Talk {
+  id         Int    @id @default(autoincrement())
+  title      String @db.VarChar(255)
+  conference String @db.VarChar(255)
+  details    String @db.VarChar(255)
+  year       String @db.VarChar(255)
+}
+
+//AUTHORIZATION
 model Account {
   id                String  @id @default(cuid())
   userId            String
