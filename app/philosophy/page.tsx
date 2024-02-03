@@ -10,7 +10,11 @@ const PhilosophyPage = async () => {
   const publications = await prisma?.publication.findMany({
     orderBy: { year: "desc" },
   });
-  
+
+  const talks = await prisma?.talk.findMany({
+    orderBy: { year: "desc" },
+  });
+
   return (
     <>
       <Header>Philosophy</Header>
@@ -22,7 +26,7 @@ const PhilosophyPage = async () => {
           will take you to a page where you can download it in open access (if
           available).
         </div>
-        <ul className={styles.projectsContainer}>
+        <ul className={styles.projectsList}>
           <li className={styles.listItem}>
             {`Mzyk, B. Non-Maximalism Reconsidered: Truthmaking and the Dependence
           of Truths on Being. `}
@@ -72,8 +76,17 @@ const PhilosophyPage = async () => {
           })}
         </ul>
       </div>
-
       <SectionHeading>My Talks</SectionHeading>
+      <ul className={styles.talksList}>
+        {talks.map((talk) => (
+          <li key={talk.id} className={styles.listItem}>
+            {`${talk.title}, `}
+            <span className={styles.italic}>{talk.conference}</span>
+            {`, ${talk.details}, ${talk.year}`}
+            {talk.isOnline && ` [online]`}
+          </li>
+        ))}
+      </ul>
       <SectionHeading>See Also My Profiles at:</SectionHeading>
     </>
   );

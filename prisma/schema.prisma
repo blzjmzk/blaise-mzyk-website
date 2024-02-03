@@ -66,11 +66,12 @@ model Publication {
 }
 
 model Talk {
-  id         Int    @id @default(autoincrement())
-  title      String @db.VarChar(255)
-  conference String @db.VarChar(255)
-  details    String @db.VarChar(255)
-  year       String @db.VarChar(255)
+  id         Int     @id @default(autoincrement())
+  title      String  @db.VarChar(255)
+  conference String  @db.VarChar(255)
+  details    String  @db.VarChar(255)
+  year       String  @db.VarChar(255)
+  isOnline   Boolean @default(false)
 }
 
 //AUTHORIZATION
