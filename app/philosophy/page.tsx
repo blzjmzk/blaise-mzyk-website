@@ -20,13 +20,13 @@ const PhilosophyPage = async () => {
       <Header>Philosophy</Header>
       <SectionHeading>My Publications</SectionHeading>
       <div className={styles.publicationsContainer}>
-        <div>
+        <div className={styles.publicationsTagline}>
           I publish under the name &quot;Błażej Mzyk&quot;, which is the Polish
           form of my first and last name. Clicking on the title of a publication
           will take you to a page where you can download it in open access (if
           available).
         </div>
-        <ul className={styles.projectsList}>
+        <ul className={styles.publicationsList}>
           <li className={styles.listItem}>
             {`Mzyk, B. Non-Maximalism Reconsidered: Truthmaking and the Dependence
           of Truths on Being. `}
