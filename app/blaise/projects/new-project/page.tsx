@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const ProjectForm = dynamic(
-  () => import("@/app/blaise/_components/project-form/ProjectForm"),
+  () => import("@/app/blaise/_components/projects-form/ProjectForm"),
   {
     ssr: false,
   }

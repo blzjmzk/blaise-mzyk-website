@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const BookNotesForm = dynamic(
-  () => import("@/app/blaise/_components/book-notes-form/BookNotesForm"),
+  () => import("@/app/blaise/_components/book-notes-form/"),
   {
     ssr: false,
   }

@@ -1,4 +1,11 @@
-import PostForm from "../_components/posts-form/PostForm";
+import dynamic from "next/dynamic";
+
+const PostForm = dynamic(
+  () => import("@/app/blaise/_components/posts-form/PostForm"),
+  {
+    ssr: false,
+  }
+);
 
 const NewPostPage = () => {
   return (

@@ -1,6 +1,6 @@
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
-import ProjectForm from "../../../_components/project-form";
+import ProjectForm from "../../../_components/projects-form";
 
 interface Props {
   params: { id: string };
