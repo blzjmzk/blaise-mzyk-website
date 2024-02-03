@@ -58,6 +58,14 @@
   transform: scale(1.1);
 }
 
+.cvButton {
+  margin: 4.4rem 0 4rem 0;
+  border-radius: var(--btn-border-radius);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .publicationsContainer {
     padding-left: 1.2rem;
@@ -71,5 +79,11 @@
     flex-direction: row;
     padding-left: 4rem;
     gap: 3.2rem;
+  }
+
+  .cvButton {
+    margin-left: 4rem;
+    justify-content: left;
+    max-width: 40rem;
   }
 }

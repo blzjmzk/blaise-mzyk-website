@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "../_components/header";
-import SectionHeading from "../_components/section-heading";
-import { Metadata } from "next";
 import prisma from "@/prisma/client";
-import styles from "./PhilosophyPage.module.css";
-import Link from "next/link";
+import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import logo_google_scholar from "../../public/images/logo-google-scholar.png";
 import logo_philpeople from "../../public/images/logo-philpeople.png";
+import Button from "../_components/button";
+import Header from "../_components/header";
+import SectionHeading from "../_components/section-heading";
+import styles from "./PhilosophyPage.module.css";
 
 const PhilosophyPage = async () => {
   const publications = await prisma?.publication.findMany({
@@ -125,6 +125,16 @@ const PhilosophyPage = async () => {
           />
         </Link>
       </div>
+      <Link
+        href="https://philpeople.org/public_cache/file?content_type=application%2Fpdf&key=4ubyqbhxg36iu2t52wq6rbojac3b"
+        className={styles.cvButton}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button variant="primary" width="80%">
+          See My Full Academic CV
+        </Button>
+      </Link>
     </>
   );
 };
