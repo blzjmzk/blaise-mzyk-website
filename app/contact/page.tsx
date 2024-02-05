@@ -1,8 +1,14 @@
 import { Metadata } from "next";
 import Header from "../_components/header";
+import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
-  return <Header>Contact</Header>;
+  return (
+    <>
+      <Header>Contact</Header>
+      <ContactForm />
+    </>
+  );
 };
 
 export const metadata: Metadata = {

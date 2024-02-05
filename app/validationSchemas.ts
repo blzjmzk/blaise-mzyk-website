@@ -105,3 +105,10 @@ export const patchProjectSchema = z.object({
     .optional(),
   features: z.string().min(1, "Features are required").max(65535).optional(),
 });
+
+//Contact form
+export const contactFormSchema = z.object({
+  name: z.string().min(1, "Name is required.").max(255),
+  email: z.string().min(1, "Email is required.").max(255),
+  message: z.string().min(1, "Message is required").max(65535),
+});
