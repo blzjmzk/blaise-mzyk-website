@@ -1,7 +1,30 @@
+/* GENERAL */
+.bold {
+  font-weight: bold;
+}
+
 .italic {
   font-style: italic;
 }
 
+/* TAGLINE */
+.philosophyTagline {
+  display: flex;
+  flex-direction: column;
+  max-width: 70rem;
+  padding: 3.2rem 2rem 0 2rem;
+  gap: 3.2rem;
+  justify-content: center;
+}
+
+.philosophyTaglineItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+/* PUBLICATIONS */
 .publicationsContainer {
   max-width: 68rem;
 }
@@ -19,6 +42,7 @@
   margin: 0;
 }
 
+/* TALKS */
 .talksList {
   margin: 0;
   max-width: 68rem;
@@ -29,6 +53,7 @@
   color: var(--color-primary);
 }
 
+/* PROFILES */
 .profilesContainer {
   display: flex;
   flex-direction: column;
@@ -85,5 +110,14 @@
     margin-left: 4rem;
     justify-content: left;
     max-width: 40rem;
+  }
+
+  .philosophyTagline {
+    margin-left: 2rem;
+  }
+
+  .philosophyTaglineItem {
+    flex-direction: row;
+    gap: 3.2rem;
   }
 }
