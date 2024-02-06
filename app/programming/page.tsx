@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import Header from "../_components/header";
 import prisma from "@/prisma/client";
+import { Metadata } from "next";
 import Image from "next/image";
-import styles from "./ProgrammingPage.module.css";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Button from "../_components/button";
+import Header from "../_components/header";
+import styles from "./ProgrammingPage.module.css";
+import { GithubLogo } from "@phosphor-icons/react/dist/ssr"; //Licence MIT
+import Link from "next/link";
 
 const ProgrammingPage = async () => {
   const projects = await prisma.project.findMany({
@@ -14,7 +15,30 @@ const ProgrammingPage = async () => {
   return (
     <>
       <Header>Programming</Header>
-      <div className={styles.projectsContainer}>
+      <section className={styles.projectsTagline}>
+        <p>
+          I became interested in programming in high school, where I was
+          familiarized with HTML and C++ since my class had a math and computer
+          science extended program. Years later I returned to this interest,
+          focusing on Javascript and web design (including HTML/CSS and also
+          Figma, Webflow and Framer). The site you are currently viewing was
+          design (Figma) and made from scratch in Next.js 14 & TypeScript. Below
+          you can see my other projects
+        </p>
+        <Link
+          href="https://github.com/blzjmzk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="primary">
+            <div className={styles.projectsTaglineButton}>
+              See my GitHub Profile
+              <GithubLogo size={35} color="var(--color-white)" />
+            </div>
+          </Button>
+        </Link>
+      </section>
+      <section className={styles.projectsContainer}>
         {projects.map((project) => (
           <div key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImage}>
@@ -44,7 +68,7 @@ const ProgrammingPage = async () => {
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 };
