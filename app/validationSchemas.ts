@@ -108,7 +108,8 @@ export const patchProjectSchema = z.object({
 
 //Contact form
 export const contactFormSchema = z.object({
-  name: z.string().min(1, "Name is required.").max(255),
-  email: z.string().min(1, "Email is required.").max(255),
+  name: z.string().min(1, "Name is required").max(255),
+  subject: z.string().min(1, "Subject is required").max(255),
+  email: z.string().email().min(1, "Email is required").max(255),
   message: z.string().min(1, "Message is required").max(65535),
 });

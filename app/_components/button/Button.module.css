@@ -29,7 +29,7 @@
 }
 
 .delete {
-  background: #dc3e42;
+  background: var(--color-red);
   color: var(--color-white);
 }
 

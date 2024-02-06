@@ -1,3 +1,8 @@
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
 .form {
   padding-top: 3.2rem;
   display: flex;
@@ -9,25 +14,35 @@
 
 .formFlex {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
+}
+
+.inputFlex {
+  flex: 1;
+  max-width: calc(50%);
 }
 
 .formInput {
   border: 1px solid lightgrey;
   border-radius: 4px;
-  padding: 0.5rem 0.7rem;
+  padding: 1.2rem 0.8rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   outline: 0;
   width: 100%;
 }
+
 .formInput:focus {
   border-color: #7db0fb;
   box-shadow: 0 0 0 4px #b9d3fa;
 }
 
+.error {
+  padding: 0.8rem 0 0 0.4rem;
+  color: var(--color-red);
+}
+
 .flexButton {
   display: flex;
-  padding: 1rem 0;
   gap: 2rem;
   justify-content: center;
 }
