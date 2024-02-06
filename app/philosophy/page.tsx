@@ -41,14 +41,18 @@ const PhilosophyPage = async () => {
               return (
                 <li key={publication.id} className={styles.listItem}>
                   {`Mzyk, B. (${publication.year}). `}
-                  <Link
-                    href={publication.link || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.customLink}
-                  >
-                    {publication.title}
-                  </Link>{" "}
+                  {publication.link ? (
+                    <Link
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.customLink}
+                    >
+                      {publication.title}
+                    </Link>
+                  ) : (
+                    <span>{publication.title}</span>
+                  )}{" "}
                   <span className={styles.italic}>
                     {publication.journalName}
                   </span>
@@ -61,14 +65,18 @@ const PhilosophyPage = async () => {
               return (
                 <li key={publication.id} className={styles.listItem}>
                   {`Mzyk, B. (${publication.year}). `}
-                  <Link
-                    href={publication.link || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.customLink}
-                  >
-                    {publication.title}
-                  </Link>
+                  {publication.link ? (
+                    <Link
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.customLink}
+                    >
+                      {publication.title}
+                    </Link>
+                  ) : (
+                    <span>{publication.title}</span>
+                  )}
                   {`. In ${publication.bookEditors} (Eds.), `}
                   <span className={styles.italic}>{publication.bookName}</span>
                   {` (pp.${publication.bookPages}). ${publication.bookPublisher}.`}
