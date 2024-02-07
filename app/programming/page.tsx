@@ -7,6 +7,7 @@ import Header from "../_components/header";
 import styles from "./ProgrammingPage.module.css";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr"; //Licence MIT
 import Link from "next/link";
+import SectionHeading from "../_components/section-heading";
 
 const ProgrammingPage = async () => {
   const projects = await prisma.project.findMany({
@@ -16,15 +17,31 @@ const ProgrammingPage = async () => {
     <>
       <Header>Programming</Header>
       <section className={styles.projectsTagline}>
-        <p>
-          I became interested in programming in high school, where I was
-          familiarized with HTML and C++ since my class had a math and computer
-          science extended program. Years later I returned to this interest,
-          focusing on Javascript and web design (including HTML/CSS and also
-          Figma, Webflow and Framer). The site you are currently viewing was
-          design (Figma) and made from scratch in Next.js 14 & TypeScript. Below
-          you can see my other projects
-        </p>
+        <div>
+          <p>
+            I became interested in programming in high school, where I was
+            acquainted with <span className="bold">C++</span> and HTML because
+            my class had an extended math and computer science program. I
+            returned to this interest during my PhD studies. I started learning{" "}
+            <span className="bold">Python</span>, then moved on to other
+            technologies.
+          </p>
+          <p>
+            I specialize in frontend development (
+            <span className="bold">
+              Next.js, React, TypeScript, JavaScript, HTML/CSS
+            </span>
+            ). I also have a background in backend (
+            <span className="bold">
+              Prisma, Express.js, building API in Next.js
+            </span>
+            ), databases (<span className="bold">MySQL, PostgreSQL</span>) and
+            graphic design (<span className="bold">Figma</span>
+            ). The site you are currently viewing was designed (Figma) and built
+            by me from scratch in Next.js 14. Below you can see some of my other
+            projects
+          </p>
+        </div>
         <Link
           href="https://github.com/blzjmzk"
           target="_blank"
@@ -44,17 +61,17 @@ const ProgrammingPage = async () => {
             <div className={styles.projectImage}>
               <Image
                 src={project.image}
-                alt={`Cover photo of ${project.title}`}
+                alt={`Screenshot of the ${project.title} project.`}
                 fill
                 style={{
-                  objectFit: "contain",
+                  objectFit: "cover",
                   objectPosition: "top",
                   borderRadius: "var(--border-radius)",
                 }}
               />
             </div>
             <div className={styles.projectDetails}>
-              <h2 className={styles.projectTitle}>{project.title}</h2>
+              <SectionHeading>{project.title}</SectionHeading>
               <div className={styles.projectDescription}>
                 <ReactMarkdown>{project.description}</ReactMarkdown>
               </div>
@@ -62,10 +79,10 @@ const ProgrammingPage = async () => {
                 <ReactMarkdown>{project.features}</ReactMarkdown>
               </div>
               <div className={styles.projectDetailsButtons}>
-                <Button variant="outline" width="18rem">
+                <Button variant="outline" width="20rem">
                   See Code
                 </Button>
-                <Button variant="primary" width="18rem">
+                <Button variant="primary" width="20rem">
                   See Live
                 </Button>
               </div>

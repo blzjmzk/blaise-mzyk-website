@@ -8,7 +8,7 @@ import Button from "./_components/button";
 const HomePage = () => {
   return (
     <>
-      <div className={styles.hero}>
+      <header className={styles.hero}>
         <div className={styles.heroBlockOne}>
           <div className={styles.heroImage}>
             <Image
@@ -54,7 +54,7 @@ const HomePage = () => {
             </Link>
           </Button>
         </div>
-      </div>
+      </header>
     </>
   );
 };

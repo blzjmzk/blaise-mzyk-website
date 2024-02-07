@@ -87,7 +87,7 @@ const ProjectForm = ({ project }: { project?: Project }) => {
         <input
           id="designLink"
           className={styles.formInput}
-          defaultValue={project?.designLink || ""}
+          defaultValue={project?.designLink ?? ""}
           type="text"
           {...register("designLink")}
           placeholder="Add project design link..."
@@ -96,7 +96,7 @@ const ProjectForm = ({ project }: { project?: Project }) => {
         <input
           id="codeLink"
           className={styles.formInput}
-          defaultValue={project?.codeLink || ""}
+          defaultValue={project?.codeLink ?? ""}
           type="text"
           {...register("codeLink")}
           placeholder="Add project code link..."
@@ -105,7 +105,7 @@ const ProjectForm = ({ project }: { project?: Project }) => {
         <input
           id="liveLink"
           className={styles.formInput}
-          defaultValue={project?.liveLink || ""}
+          defaultValue={project?.liveLink ?? ""}
           type="text"
           {...register("liveLink")}
           placeholder="Add project live link..."

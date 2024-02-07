@@ -96,3 +96,7 @@ p {
   gap: 2rem;
   justify-content: center;
 }
+
+.bold {
+  font-weight: bold;
+}

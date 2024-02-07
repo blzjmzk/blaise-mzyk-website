@@ -95,9 +95,9 @@ export const patchProjectSchema = z.object({
   order: z.string().min(1, "Order is required.").max(2).optional(),
   type: z.string().min(1, "Type is required.").max(255).optional(),
   image: z.string().min(1, "Image is required.").max(255).optional(),
-  codeLink: z.string().min(1, "code link is required.").max(255).optional(),
-  liveLink: z.string().min(1, "live link is required.").max(255).optional(),
-  designLink: z.string().min(1, "design link is required.").max(255).optional(),
+  codeLink: z.string().max(255).nullable().optional(),
+  liveLink: z.string().max(255).nullable().optional(),
+  designLink: z.string().max(255).nullable().optional(),
   description: z
     .string()
     .min(1, "Description is required")
