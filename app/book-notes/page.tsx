@@ -12,7 +12,11 @@ const BookNotesPage = async () => {
   return (
     <>
       <Header>My Book Notes</Header>
-      <div className={styles.booksContainer}>
+      <h3 className={styles.booksTagline}>
+        Below you will find my notes from the books (which I read in Polish
+        translation):
+      </h3>
+      <section className={styles.booksContainer}>
         {bookNotes.map((bookNote) => (
           <Link
             className="link-clear-black"
@@ -46,7 +50,7 @@ const BookNotesPage = async () => {
             </div>
           </Link>
         ))}
-      </div>
+      </section>
     </>
   );
 };

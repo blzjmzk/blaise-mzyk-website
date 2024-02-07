@@ -24,15 +24,17 @@ const BookNotePage = async ({ params }: Props) => {
       <Header>
         {bookNote.title} by {bookNote.author} ({bookNote.year})
       </Header>
-      <p className={styles.bookNoteContainer}>{bookNote.description}</p>
-      <SectionHeading>Highlights</SectionHeading>
-      <div className={styles.bookNoteContainer}>
-        <ReactMarkdown>{bookNote.highlights}</ReactMarkdown>
-      </div>
-      <SectionHeading>Thoughts</SectionHeading>
-      <div className={styles.bookNoteContainer}>
-        <ReactMarkdown>{bookNote.thoughts}</ReactMarkdown>
-      </div>
+      <section className={styles.bookNoteContainer}>
+        <p>{bookNote.description}</p>
+        <section>
+          <SectionHeading>Highlights</SectionHeading>
+          <ReactMarkdown>{bookNote.highlights}</ReactMarkdown>
+        </section>
+        <section>
+          <SectionHeading>Thoughts</SectionHeading>
+          <ReactMarkdown>{bookNote.thoughts}</ReactMarkdown>
+        </section>
+      </section>
     </>
   );
 };
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: Props) {
   const bookNote = await fetchPost(params.slug);
   return {
     title: "Book Notes | " + bookNote?.title,
-    description: bookNote?.description,
+    description: `Book Note of ${bookNote?.title} by ${bookNote?.author}`,
   };
 }
 
