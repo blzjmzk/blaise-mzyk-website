@@ -16,16 +16,24 @@
   gap: 1.2rem;
   padding: 0.8rem 2rem;
 }
+
 /* PROJECTS */
+
+.projectsContainer {
+  padding: 4.4rem 2rem;
+}
+
 .projectContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
   flex-direction: column;
 }
 
 .projectImage {
-  width: 22rem;
-  height: 34rem;
+  width: 100%;
+  min-height: 30rem;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
@@ -49,9 +57,8 @@
 
 .projectDetailsButtons {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 3.6rem;
+  gap: 3.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -62,9 +69,11 @@
   }
 
   .projectImage {
+    height: 20rem;
+    max-width: 40rem;
   }
   .projectDetails {
-    max-width: 400px;
+    max-width: 45rem;
   }
 
   .projectsTagline {

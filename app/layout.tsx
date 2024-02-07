@@ -29,9 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.variable} ${nunitoSans.variable}`}>
         <AuthProvider>
-          <header>
-            <NavBar />
-          </header>
+          <NavBar />
           <main className="container">{children}</main>
           <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
         </AuthProvider>

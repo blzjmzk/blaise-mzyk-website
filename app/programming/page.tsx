@@ -46,9 +46,9 @@ const ProgrammingPage = async () => {
                 src={project.image}
                 alt={`Cover photo of ${project.title}`}
                 fill
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{
-                  objectFit: "cover",
+                  objectFit: "contain",
+                  objectPosition: "top",
                   borderRadius: "var(--border-radius)",
                 }}
               />
@@ -62,8 +62,12 @@ const ProgrammingPage = async () => {
                 <ReactMarkdown>{project.features}</ReactMarkdown>
               </div>
               <div className={styles.projectDetailsButtons}>
-                <Button variant="outline">See Code</Button>
-                <Button variant="primary">See Live</Button>
+                <Button variant="outline" width="18rem">
+                  See Code
+                </Button>
+                <Button variant="primary" width="18rem">
+                  See Live
+                </Button>
               </div>
             </div>
           </div>
