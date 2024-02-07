@@ -3,6 +3,7 @@ import { Nunito_Sans, Open_Sans } from "next/font/google";
 import NavBar from "./_navbar";
 import "./css/globals.css";
 import AuthProvider from "./auth/Provider";
+import favicon from "../public/images/favicon.ico";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
