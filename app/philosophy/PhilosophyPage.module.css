@@ -7,34 +7,14 @@
   font-style: italic;
 }
 
-/* TAGLINE */
-.philosophyTagline {
-  display: flex;
-  flex-direction: column;
-  max-width: 70rem;
-  padding: 3.2rem 2rem 0 2rem;
-  gap: 3.2rem;
-  justify-content: center;
+.customLink {
+  color: var(--color-primary);
 }
 
-.philosophyTaglineItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-/* PUBLICATIONS */
-.publicationsContainer {
+.sectionContainer {
+  margin: 0 auto;
   max-width: 68rem;
-}
-
-.publicationsTagline {
-  padding-left: 3.2rem;
-}
-
-.publicationsList {
-  padding-left: 4.8rem;
+  padding: 0 1.2rem;
 }
 
 .listItem {
@@ -42,30 +22,50 @@
   margin: 0;
 }
 
+/* TAGLINE */
+.philosophyTagline {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 3.2rem 1.2rem 0 1.2rem;
+  text-align: justify;
+}
+
+.philosophyTaglineItem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* PUBLICATIONS */
+.publicationsTagline {
+  text-align: justify;
+}
+
 /* TALKS */
 .talksList {
   margin: 0;
-  max-width: 68rem;
-  padding-left: 5.2rem;
-}
-
-.customLink {
-  color: var(--color-primary);
 }
 
 /* PROFILES */
 .profilesContainer {
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  gap: 3.6rem;
+  padding: 2rem 0;
 }
 
 .philpeopleImage {
+  height: 16rem;
   position: relative;
-  width: 14rem;
-  height: 18rem;
   transition: all 0.2s ease-in-out;
+  width: 16rem;
 }
 
 .philpeopleImage:hover {
@@ -74,8 +74,8 @@
 
 .googleScholarImage {
   position: relative;
-  width: 26rem;
-  height: 16rem;
+  width: 25rem;
+  height: 15.7rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,40 +84,31 @@
 }
 
 .cvButton {
-  margin: 4.4rem 0 4rem 0;
-  border-radius: var(--btn-border-radius);
+  margin-top: 3.2rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
-  .publicationsContainer {
-    padding-left: 1.2rem;
-  }
-
-  .talksList {
-    padding-left: 6rem;
-  }
-
-  .profilesContainer {
-    flex-direction: row;
-    padding-left: 4rem;
-    gap: 3.2rem;
-  }
-
-  .cvButton {
-    margin-left: 4rem;
-    justify-content: left;
-    max-width: 40rem;
-  }
-
   .philosophyTagline {
-    margin-left: 2rem;
+    padding: 5.2rem 0 0 0;
+    max-width: 68rem;
+    gap: 4rem;
   }
 
   .philosophyTaglineItem {
     flex-direction: row;
     gap: 3.2rem;
+  }
+
+  .profilesContainer {
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  .cvButton {
+    margin: 5.2rem 0;
   }
 }

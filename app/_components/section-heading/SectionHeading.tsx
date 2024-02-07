@@ -3,9 +3,9 @@ import styles from "./SectionHeading.module.css";
 
 const SectionHeading = ({ children }: PropsWithChildren) => {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <h2 className={styles.headingText}>{children}</h2>
-    </div>
+    </header>
   );
 };
 

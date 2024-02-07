@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import logo_google_scholar from "../../public/images/logo-google-scholar.png";
-import logo_philpeople from "../../public/images/logo-philpeople.png";
+import logo_philpeople from "../../public/images/logo-philpeople.svg";
 import Button from "../_components/button";
 import Header from "../_components/header";
 import SectionHeading from "../_components/section-heading";
@@ -80,15 +80,15 @@ const PhilosophyPage = async () => {
           </p>
         </div>
       </section>
-      <SectionHeading>My Publications</SectionHeading>
-      <section className={styles.publicationsContainer}>
+      <section className={styles.sectionContainer}>
+        <SectionHeading>My Publications</SectionHeading>
         <div className={styles.publicationsTagline}>
           I publish under the name &quot;Błażej Mzyk&quot;, which is the Polish
           form of my first and last name. Clicking on the title of a publication
           will take you to a page where you can download it in open access (if
           available).
         </div>
-        <ul className={styles.publicationsList}>
+        <ul>
           <li className={styles.listItem}>
             {`Mzyk, B. Non-Maximalism Reconsidered: Truthmaking and the Dependence
           of Truths on Being. `}
@@ -146,7 +146,7 @@ const PhilosophyPage = async () => {
           })}
         </ul>
       </section>
-      <section>
+      <section className={styles.sectionContainer}>
         <SectionHeading>My Talks</SectionHeading>
         <ul className={styles.talksList}>
           {talks.map((talk) => (
@@ -159,51 +159,53 @@ const PhilosophyPage = async () => {
           ))}
         </ul>
       </section>
-      <SectionHeading>See Also My Profiles at:</SectionHeading>
-      <section className={styles.profilesContainer}>
+      <section className={styles.sectionContainer}>
+        <SectionHeading>See Also My Profiles at:</SectionHeading>
+        <div className={styles.profilesContainer}>
+          <Link
+            href={"https://philpeople.org/profiles/blazej-mzyk"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.philpeopleImage}
+          >
+            <Image
+              src={logo_philpeople}
+              alt="PhilPeople logo"
+              fill
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </Link>
+          <Link
+            href="https://scholar.google.com/citations?user=PF86w3oAAAAJ&hl="
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.googleScholarImage}
+          >
+            <Image
+              src={logo_google_scholar}
+              alt="Google Scholar logo"
+              fill
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </Link>
+        </div>
         <Link
-          href={"https://philpeople.org/profiles/blazej-mzyk"}
+          href="https://philpeople.org/public_cache/file?content_type=application%2Fpdf&key=4ubyqbhxg36iu2t52wq6rbojac3b"
+          className={styles.cvButton}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.philpeopleImage}
         >
-          <Image
-            src={logo_philpeople}
-            alt="PhilPeople logo"
-            fill
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </Link>
-        <Link
-          href="https://scholar.google.com/citations?user=PF86w3oAAAAJ&hl="
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.googleScholarImage}
-        >
-          <Image
-            src={logo_google_scholar}
-            alt="Google Scholar logo"
-            fill
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-            style={{
-              objectFit: "cover",
-            }}
-          />
+          <Button variant="primary" width="37.2rem">
+            See My Full Academic CV
+          </Button>
         </Link>
       </section>
-      <Link
-        href="https://philpeople.org/public_cache/file?content_type=application%2Fpdf&key=4ubyqbhxg36iu2t52wq6rbojac3b"
-        className={styles.cvButton}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button variant="primary" width="80%">
-          See My Full Academic CV
-        </Button>
-      </Link>
     </>
   );
 };
