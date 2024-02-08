@@ -1,0 +1,17 @@
+Unique Project License - Version 1.0
+
+1. This license grants the right to use solely the unique and original project created by Błażej Mzyk (hereinafter referred to as the "Project").
+
+2. Users are not permitted to copy, reproduce, adapt, or create derivative works based on the Project without the explicit written consent of the copyright owner.
+
+3. The Project is protected by copyright law and constitutes the intellectual property of Błażej Mzyk. All rights to the Project are reserved.
+
+4. The use of the Project for commercial, personal, or educational purposes is prohibited without the prior written consent of the copyright owner.
+
+5. The Project may only be used for presentation and demonstration purposes while maintaining its original form and appearance.
+
+6. The copyright owner reserves the right to take legal action in case of violation of this license.
+
+7. This license comes into effect upon the release of the Project on the GitHub platform.
+
+8. All rights reserved Błażej Mzyk, 2024.
