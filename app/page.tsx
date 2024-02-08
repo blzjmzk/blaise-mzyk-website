@@ -29,7 +29,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className={styles.heroBlockTwo}>
-          <div className={styles.heroTagline}>
+          <p className={styles.heroTagline}>
             I am a{" "}
             <Link href="/philosophy" className={styles.customLink}>
               philosopher
@@ -50,7 +50,7 @@ const HomePage = () => {
               book notes
             </Link>
             . I also encourage you to check out my blog.
-          </div>
+          </p>
           <Button variant={"primary"}>
             <Link href="/blog" className="link-clear">
               Read My blog
