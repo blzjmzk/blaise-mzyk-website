@@ -1,10 +1,11 @@
 import Header from "@/app/_components/header";
+import SectionHeading from "@/app/_components/section-heading";
 import prisma from "@/prisma/client";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./BookNotePage.module.css";
-import SectionHeading from "@/app/_components/section-heading";
 
 interface Props {
   params: { slug: string };
@@ -25,7 +26,21 @@ const BookNotePage = async ({ params }: Props) => {
         {bookNote.title} by {bookNote.author} ({bookNote.year})
       </Header>
       <section className={styles.bookNoteContainer}>
-        <p>{bookNote.description}</p>
+        <div className={styles.bookTagline}>
+          <div className={styles.bookCover}>
+            <Image
+              src={bookNote.cover}
+              alt={`Cover photo of ${bookNote.title}`}
+              fill
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+                borderRadius: "var(--border-radius)",
+              }}
+            />
+          </div>
+          <p className="bookDescription">{bookNote.description}</p>
+        </div>
         <section>
           <SectionHeading>Highlights</SectionHeading>
           <ReactMarkdown>{bookNote.highlights}</ReactMarkdown>

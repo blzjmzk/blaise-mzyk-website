@@ -4,8 +4,35 @@
   padding: 3rem 1.6rem;
   text-align: justify;
 }
+
+.bookTagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.4rem;
+}
+
+.bookCover {
+  width: 22rem;
+  height: 34rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
 @media screen and (min-width: 768px) {
   .bookNoteContainer {
     padding-top: 5.2rem;
+  }
+
+  .bookTagline {
+    flex-direction: row;
+    gap: 5.6rem;
+    padding-bottom: 2rem;
+  }
+
+  .bookTagline p {
+    flex: 1;
   }
 }
