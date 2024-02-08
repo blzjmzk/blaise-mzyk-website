@@ -34,7 +34,7 @@ const HomePage = () => {
             <Link href="/philosophy" className={styles.customLink}>
               philosopher
             </Link>{" "}
-            (finishing PhD) and a{" "}
+            (finishing PhD) and an{" "}
             <Link
               href="/programming"
               className={`${styles.customLink} ${styles.noWrap}`}

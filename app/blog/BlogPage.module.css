@@ -25,8 +25,8 @@
 
 .postPropertiesContainer {
   display: flex;
-  align-items: center;
-  gap: 1.6rem;
+  flex-direction: column;
+  gap: 0.8rem;
   margin: 0 0 1.2rem 0;
 }
 
@@ -38,6 +38,7 @@
 .postProperties {
   font-weight: bold;
   font-size: 1.5rem;
+  padding-right: 0.4rem;
 }
 
 .propertiesContainer {
@@ -48,6 +49,13 @@
 
 .postPublishedValue {
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .postPropertiesContainer {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
