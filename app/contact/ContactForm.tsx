@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <div>
       <h2 className={styles.heading}>You can send me a message here:</h2>
-      {error && <div className={styles.error}>{error}</div>}
+      {error && toast.error(error)}
       <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.formFlex}>
           <div className={styles.inputFlex}>
