@@ -12,9 +12,6 @@
   position: relative;
 }
 
-.postPageNavbar {
-}
-
 .navBrand {
   margin-left: 2rem;
   margin-bottom: 0.4rem;
@@ -22,12 +19,10 @@
   padding: 0;
   width: 164px;
   height: 24px;
-  /* border: 1px solid red; */
 }
 
 .navMenu {
   margin-right: 2rem;
-  /* border: 1px solid red; */
 }
 
 .navList {

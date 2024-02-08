@@ -38,8 +38,8 @@ const ProgrammingPage = async () => {
             ), databases (<span className="bold">MySQL, PostgreSQL</span>) and
             graphic design (<span className="bold">Figma</span>
             ). The site you are currently viewing was designed (Figma) and built
-            by me from scratch in Next.js 14. Below you can see some of my other
-            projects
+            by me from scratch in Next.js 14. Below you can see details about
+            some of my projects
           </p>
         </div>
         <Link
@@ -50,7 +50,7 @@ const ProgrammingPage = async () => {
           <Button variant="primary">
             <div className={styles.projectsTaglineButton}>
               See my GitHub Profile
-              <GithubLogo size={35} color="var(--color-white)" />
+              <GithubLogo size={29} color="var(--color-white)" />
             </div>
           </Button>
         </Link>
@@ -79,12 +79,61 @@ const ProgrammingPage = async () => {
                 <ReactMarkdown>{project.features}</ReactMarkdown>
               </div>
               <div className={styles.projectDetailsButtons}>
-                <Button variant="outline" width="20rem">
-                  See Code
-                </Button>
-                <Button variant="primary" width="20rem">
-                  See Live
-                </Button>
+                {project.type === "mywebsite" && (
+                  <>
+                    <Link
+                      href={project.designLink!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" width="100%">
+                        See Design in Figma
+                      </Button>
+                    </Link>
+                    <Link
+                      href={project.codeLink!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="primary" width="100%">
+                        See Code
+                      </Button>
+                    </Link>
+                  </>
+                )}
+                {project.type === "app" && (
+                  <>
+                    <Link
+                      href={project.codeLink!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" width="100%">
+                        See Code
+                      </Button>
+                    </Link>
+                    <Link
+                      href={project.liveLink!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="primary" width="100%">
+                        See Live
+                      </Button>
+                    </Link>
+                  </>
+                )}
+                {project.type === "website" && (
+                  <Link
+                    href={project.designLink!}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" width="100%">
+                      See Design in Figma
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
 import Button from "../_components/button";
 import styles from "./NavBar.module.css";
@@ -13,7 +13,6 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const currentPath = usePathname();
-  const isPostPage = currentPath.includes("/blog/");
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -81,11 +80,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav
-      className={`${styles.navigation} ${
-        isPostPage ? styles.postPageNavbar : ""
-      }`}
-    >
+    <nav className={styles.navigation}>
       <Link href="/" onClick={closeMenu}>
         <div className={styles.navBrand}>
           <Image
