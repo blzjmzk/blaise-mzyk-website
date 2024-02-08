@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Open_Sans } from "next/font/google";
+import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
 import NavBar from "./_navbar";
-import "./css/globals.css";
 import AuthProvider from "./auth/Provider";
-import favicon from "../public/images/favicon.ico";
+import "./css/globals.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -28,6 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalyticsScript />
       <body className={`${openSans.variable} ${nunitoSans.variable}`}>
         <AuthProvider>
           <NavBar />
