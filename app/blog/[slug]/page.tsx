@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { cache, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./PostPage.module.css";
+import Link from "next/link";
+import Button from "@/app/_components/button";
 
 interface Props {
   params: { slug: string };
@@ -24,6 +26,13 @@ const PostPage = async ({ params }: Props) => {
       <div className={styles.postContainer}>
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
+      <Link href="/blog">
+        <div className={styles.postButton}>
+          <Button variant="primary" width="100%">
+            See Other Posts
+          </Button>
+        </div>
+      </Link>
     </>
   );
 };
