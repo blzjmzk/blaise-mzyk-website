@@ -35,8 +35,11 @@ const HomePage = () => {
               philosopher
             </Link>{" "}
             (finishing PhD) and a{" "}
-            <Link href="/programming" className={styles.customLink}>
-              programmer
+            <Link
+              href="/programming"
+              className={`${styles.customLink} ${styles.noWrap}`}
+            >
+              aspiring programmer
             </Link>{" "}
             based in Kraków, Poland. Here you can find more information about
             me, as well as my{" "}
