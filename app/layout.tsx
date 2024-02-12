@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Open_Sans } from "next/font/google";
 import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
-import NavBar from "./_navbar";
+import NavBar from "./_components/navbar";
 import AuthProvider from "./auth/Provider";
 import "./css/globals.css";
 

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import logo_of_blaise_mzyk from "../../public/images/logo_of_blaise_mzyk.png";
-import Button from "../_components/button";
+import logo_of_blaise_mzyk from "@/public/images/logo_of_blaise_mzyk.png";
+import Button from "../button";
 import styles from "./NavBar.module.css";
 import MenuButton from "./menu-button/menuButton";
 
