@@ -209,6 +209,9 @@ const PhilosophyPage = async () => {
     </>
   );
 };
+
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Philosophy",
   description: "Blaise Mzyk philosophy page ",

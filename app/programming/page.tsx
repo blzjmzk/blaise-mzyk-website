@@ -143,6 +143,8 @@ const ProgrammingPage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Programming",
   description: "Blaise Mzyk programming page ",

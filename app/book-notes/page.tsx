@@ -55,6 +55,8 @@ const BookNotesPage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Book Notes",
   description: "Blaise Mzyk book notes page ",

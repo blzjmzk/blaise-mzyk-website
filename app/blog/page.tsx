@@ -44,6 +44,8 @@ const BlogPage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Blog",
   description: "Blaise Mzyk blog page ",
