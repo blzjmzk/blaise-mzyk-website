@@ -30,16 +30,20 @@
 }
 
 .navListOpen {
+  align-items: center;
+  background-color: var(--color-white);
   display: flex;
-  font-size: 1.8rem;
-  gap: 2rem;
   flex-direction: column;
+  font-size: 2.25rem;
+  gap: 2rem;
+  height: calc(100vh - 50px);
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
   position: absolute;
   top: 50px;
-  width: 100vw;
-  background-color: var(--color-white);
-  height: 100vh;
   transform-origin: top;
+  width: 100vw;
 }
 
 .navItem {

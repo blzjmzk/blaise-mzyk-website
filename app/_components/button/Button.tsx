@@ -1,6 +1,5 @@
+import { CSSProperties, ReactNode } from "react";
 import styles from "./Button.module.css";
-import React, { CSSProperties, ReactNode } from "react";
-import PropTypes from "prop-types";
 
 interface Props {
   variant: "primary" | "outline" | "delete";
