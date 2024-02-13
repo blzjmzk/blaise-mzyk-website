@@ -8,7 +8,7 @@ import Button from "../button";
 import styles from "./NavBar.module.css";
 import MenuButton from "./menu-button/menuButton";
 import MobileMenu from "./mobile-menu";
-import NavLinkComponent from "./nav-link-component";
+import NavLinkComponent from "./nav-link-component/NavlinkComponent";
 
 interface Navlink {
   label: string;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "../../button";
 import styles from "../NavBar.module.css";
-import NavLinkComponent from "../nav-link-component";
+import NavLinkComponent from "../nav-link-component/NavlinkComponent";
 
 interface Props {
   navLinks: Navlink[];
