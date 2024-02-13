@@ -8,7 +8,7 @@ import Button from "../button";
 import styles from "./NavBar.module.css";
 import MenuButton from "./menu-button/menuButton";
 import MobileMenu from "./mobile-menu";
-import NavLinkComponent from "./nav-link-component/NavlinkComponent";
+import MyNavLink from "./my-nav-link";
 
 interface Navlink {
   label: string;
@@ -44,12 +44,12 @@ const NavBar = () => {
       <ul className={styles.navList}>
         {navLinks.map((navLink) => (
           <li key={navLink.href} className={styles.navItem}>
-            <NavLinkComponent href={navLink.href}>
+            <MyNavLink href={navLink.href}>
               {navLink.label === "Blog" && (
                 <Button variant="outline">{navLink.label}</Button>
               )}
               {navLink.label !== "Blog" && navLink.label}
-            </NavLinkComponent>
+            </MyNavLink>
           </li>
         ))}
       </ul>

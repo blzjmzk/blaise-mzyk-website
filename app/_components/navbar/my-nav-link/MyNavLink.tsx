@@ -9,7 +9,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const NavLinkComponent = ({ href, onClick, children }: Props) => {
+const MyNavLink = ({ href, onClick, children }: Props) => {
   const currentPath = usePathname();
 
   return (
@@ -25,4 +25,4 @@ const NavLinkComponent = ({ href, onClick, children }: Props) => {
   );
 };
 
-export default NavLinkComponent;
+export default MyNavLink;

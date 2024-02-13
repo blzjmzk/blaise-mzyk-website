@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "../../button";
 import styles from "../NavBar.module.css";
-import NavLinkComponent from "../nav-link-component/NavlinkComponent";
+import MyNavLink from "../my-nav-link";
 
 interface Props {
   navLinks: Navlink[];
@@ -74,12 +74,12 @@ const MobileMenu = ({ navLinks, onClick }: Props) => {
             variants={mobileMenuLinksVariants}
             className={styles.navItem}
           >
-            <NavLinkComponent href={navLink.href} onClick={onClick}>
+            <MyNavLink href={navLink.href} onClick={onClick}>
               {navLink.label === "Blog" && (
                 <Button variant="outline">{navLink.label}</Button>
               )}
               {navLink.label !== "Blog" && navLink.label}
-            </NavLinkComponent>
+            </MyNavLink>
           </motion.li>
         </div>
       ))}
