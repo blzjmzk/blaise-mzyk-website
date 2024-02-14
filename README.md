@@ -2,7 +2,8 @@
 - Integration with a database (Supabase - PostgreSQL) using ORM (Prisma)
 - Authentication access to admin panel (and some API routes) using NextAuth.js
 - Sending emails with Nodemailer
-  React Hook Form + Zod
-  Toast notifications (React Hot Toast)
-  Markdown editor (SimpleMDE)
-  Styling: CSS modules
+- React Hook Form + Zod
+- Toast notifications (React Hot Toast)
+- Markdown editor (SimpleMDE)
+- Animations (Navbar) with Framer Motion
+- Styling: CSS modules
