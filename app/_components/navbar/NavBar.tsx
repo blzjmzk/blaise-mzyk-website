@@ -1,6 +1,11 @@
 "use client";
 import logo_of_blaise_mzyk from "@/public/images/logo_of_blaise_mzyk.png";
-import { AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -17,6 +22,17 @@ interface Navlink {
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuHidden, setMenuHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (previous && latest > previous && latest > 150) {
+      setMenuHidden(true);
+    } else {
+      setMenuHidden(false);
+    }
+  });
 
   const navLinks: Navlink[] = [
     { label: "Philosophy", href: "/philosophy" },
@@ -27,7 +43,15 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className={styles.navigation}>
+    <motion.nav
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={menuHidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className={styles.navigation}
+    >
       <Link href="/" onClick={() => setMenuOpen(false)}>
         <div className={styles.navBrand}>
           <Image
@@ -64,7 +88,7 @@ const NavBar = () => {
           <MobileMenu navLinks={navLinks} onClick={() => setMenuOpen(false)} />
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 

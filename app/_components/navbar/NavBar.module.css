@@ -1,15 +1,17 @@
 .navigation {
-  display: flex;
-  z-index: 9999;
-  height: 80px;
-  max-width: 1160px;
-  justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
+  background-color: var(--color-white);
+  display: flex;
+  flex-wrap: wrap;
   font-size: 1.6rem;
-  position: relative;
+  height: 80px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1160px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .navBrand {
@@ -36,7 +38,7 @@
   flex-direction: column;
   font-size: 2.25rem;
   gap: 2rem;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 5rem);
   justify-content: center;
   margin: 0;
   padding-left: 0;
