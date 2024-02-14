@@ -33,7 +33,9 @@ export default function RootLayout({
         <AuthProvider>
           <NavBar />
           <main className="container">{children}</main>
-          <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
+          <footer className="footer">
+            <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
+          </footer>
         </AuthProvider>
       </body>
     </html>
