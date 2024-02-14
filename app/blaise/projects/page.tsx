@@ -69,6 +69,8 @@ const ProjectsPage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Admin Panel - Projects",
   description: "Blaise Mzyk admin panel - editing projects",

@@ -70,6 +70,8 @@ const BookNotePage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Admin Panel - Book Notes",
   description: "Blaise Mzyk admin panel - editing book notes",

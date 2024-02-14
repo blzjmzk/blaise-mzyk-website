@@ -72,6 +72,8 @@ const PostsPage = async () => {
   );
 };
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Admin Panel",
   description: "Blaise Mzyk admin panel ",
