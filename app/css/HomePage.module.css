@@ -3,8 +3,7 @@
   flex-direction: column;
   gap: 1.6rem;
   align-items: center;
-  height: 100vh;
-  margin-top: 3.2rem;
+  margin-top: 0.8rem;
 }
 
 .heroBlockOne {
@@ -64,7 +63,7 @@
   .hero {
     flex-direction: row;
     justify-content: center;
-    margin-top: -4rem;
+    margin-top: 1.2rem;
   }
 
   .heroImage {
