@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Blaise Mzyk",
   description:
     "Portfolio website of Blaise (Błażej) Mzyk - philosopher and programmer. On this site you can find more information about the author, as well as book notes and blog.",
+  metadataBase: new URL("https://blaisemzyk.com/"),
   openGraph: {
     title: "Blaise Mzyk's Website",
     description:
