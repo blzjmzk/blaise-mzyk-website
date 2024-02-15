@@ -19,7 +19,14 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: "Blaise Mzyk",
-  description: "Blaise Mzyk Webpage",
+  description:
+    "Portfolio website of Blaise (Błażej) Mzyk - philosopher and programmer. On this site you can find more information about the author, as well as book notes and blog.",
+  openGraph: {
+    title: "Blaise Mzyk's Website",
+    description:
+      "Portfolio website of Blaise (Błażej) Mzyk - philosopher and programmer. On this site you can find more information about the author, as well as book notes and blog.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -64,7 +64,6 @@ const HomePage = () => {
 
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Homepage",
-  description: "Blaise Mzyk Homepage",
 };
 
 export default HomePage;
