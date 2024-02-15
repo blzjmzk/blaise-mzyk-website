@@ -196,7 +196,7 @@ const PhilosophyPage = async () => {
           </Link>
         </div>
         <Link
-          href="https://philpeople.org/public_cache/file?content_type=application%2Fpdf&key=4ubyqbhxg36iu2t52wq6rbojac3b"
+          href={"documents/academic-cv-blazej-mzyk.pdf"}
           className={styles.cvButton}
           target="_blank"
           rel="noopener noreferrer"

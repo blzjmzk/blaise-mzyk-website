@@ -97,24 +97,3 @@ li {
     font-size: 3.125rem;
   }
 }
-
-/* COPYRIGHT */
-.footer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 3.2rem auto 2.4rem auto;
-}
-
-.copyright {
-  font-size: 1.44rem;
-  color: rgba(37, 49, 60, 0.59);
-  position: absolute;
-  bottom: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .copyright {
-    font-size: 1.28rem;
-  }
-}

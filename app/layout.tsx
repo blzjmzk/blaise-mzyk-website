@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Open_Sans } from "next/font/google";
 import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
+import Footer from "./_components/footer";
 import NavBar from "./_components/navbar";
 import AuthProvider from "./auth/Provider";
 import "./css/globals.css";
@@ -33,9 +34,7 @@ export default function RootLayout({
         <AuthProvider>
           <NavBar />
           <main className="container">{children}</main>
-          <footer className="footer">
-            <p className="copyright">© Copyright 2024 – Błażej Mzyk</p>
-          </footer>
+          <Footer />
         </AuthProvider>
       </body>
     </html>

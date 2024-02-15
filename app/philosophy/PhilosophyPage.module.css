@@ -80,7 +80,7 @@
 }
 
 .cvButton {
-  margin-top: 3.2rem;
+  margin: 3.2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
