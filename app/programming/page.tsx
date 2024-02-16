@@ -35,11 +35,19 @@ const ProgrammingPage = async () => {
             <span className="bold">
               Prisma, Express.js, building API in Next.js
             </span>
-            ), databases (<span className="bold">MySQL, PostgreSQL</span>) and
+            ), databases (<span className="bold">MySQL, MongoDB</span>) and
             graphic design (<span className="bold">Figma</span>
-            ). The site you are currently viewing was designed (Figma) and built
-            by me from scratch in Next.js 14. Below you can see details about
-            some of my projects
+            ). I have also worked on projects using{" "}
+            <span className="bold">TailwindCSS</span> and various UI libraries (
+            <span className="bold">
+              Radix UI, Shadcn UI, daisyUI, Chakra UI
+            </span>
+            ).
+          </p>
+          <p>
+            The site you are currently viewing was designed (Figma) and built by
+            me from scratch in Next.js 14. Below you can see details about some
+            of my projects
           </p>
         </div>
         <Link
