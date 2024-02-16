@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 2rem;
   max-width: 60rem;
-  margin: 0 auto;
+  margin: 0 auto 2.4rem auto;
 }
 
 .formFlex {
