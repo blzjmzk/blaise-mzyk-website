@@ -44,7 +44,7 @@ const ProjectForm = ({ project }: { project?: Project }) => {
   });
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       {error && <div>{error}</div>}
       <form onSubmit={onSubmit} className={styles.form}>
         <input

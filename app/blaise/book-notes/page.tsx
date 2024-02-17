@@ -26,7 +26,9 @@ const BookNotePage = async () => {
               Id
             </th>
             <th className={styles.tableData}>Title</th>
-            <th className={styles.tableData}>Author</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Author
+            </th>
             <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
               Year
             </th>
@@ -42,7 +44,9 @@ const BookNotePage = async () => {
                 {bookNote.id}
               </td>
               <td className={styles.tableData}>{bookNote.title}</td>
-              <td className={styles.tableData}>{bookNote.author}</td>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
+                {bookNote.author}
+              </td>
               <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
                 {bookNote.year}
               </td>

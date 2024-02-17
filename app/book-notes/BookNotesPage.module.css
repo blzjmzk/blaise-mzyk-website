@@ -38,6 +38,8 @@
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  align-items: center;
+  text-align: center;
 }
 
 .bookDetailsValue {

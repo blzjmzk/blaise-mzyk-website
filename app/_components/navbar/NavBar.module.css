@@ -7,7 +7,7 @@
   height: 80px;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1160px;
+  max-width: 116rem;
   position: sticky;
   top: 0;
   width: 100%;
@@ -38,12 +38,12 @@
   flex-direction: column;
   font-size: 2.25rem;
   gap: 2rem;
-  height: calc(100vh - 5rem);
+  height: 100vh;
   justify-content: center;
   margin: 0;
   padding-left: 0;
   position: absolute;
-  top: 50px;
+  top: 5rem;
   transform-origin: top;
   width: 100vw;
 }

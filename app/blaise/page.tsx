@@ -26,7 +26,9 @@ const PostsPage = async () => {
               Id
             </th>
             <th className={styles.tableData}>Title</th>
-            <th className={styles.tableData}>Category</th>
+            <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
+              Category
+            </th>
             <th className={styles.tableData}>Publishing Time</th>
             <th className={[styles.tableData, styles.tableDesktop].join(" ")}>
               Updated Time
@@ -42,7 +44,9 @@ const PostsPage = async () => {
                 {post.id}
               </td>
               <td className={styles.tableData}>{post.title}</td>
-              <td className={styles.tableData}>{post.category}</td>
+              <td className={[styles.tableData, styles.tableDesktop].join(" ")}>
+                {post.category}
+              </td>
               <td className={styles.tableData}>
                 {formatDate(post.publishedAt.toDateString())}
               </td>
