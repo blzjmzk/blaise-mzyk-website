@@ -1,5 +1,6 @@
 .menuButton {
   background: transparent;
+  width: 100px;
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -17,7 +18,7 @@
 }
 
 .menuButton[aria-expanded="true"] :is(.top, .bottom) {
-  y: 45;
+  y: 45px;
 }
 
 .menuButton[aria-expanded="true"] .top {
