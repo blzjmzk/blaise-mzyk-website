@@ -39,7 +39,7 @@ const HomePage = () => {
               href="/programming"
               className={`${styles.customLink} ${styles.noWrap}`}
             >
-              aspiring programmer
+              aspiring software engineer
             </Link>{" "}
             based in Kraków, Poland. Here you can find more information about
             me, as well as my{" "}

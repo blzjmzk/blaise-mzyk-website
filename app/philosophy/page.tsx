@@ -89,12 +89,6 @@ const PhilosophyPage = async () => {
           available).
         </div>
         <ul>
-          <li className={styles.listItem}>
-            {`Mzyk, B. Non-Maximalism Reconsidered: Truthmaking and the Dependence
-          of Truths on Being. `}
-            <span className={styles.italic}>Filozofia Nauki</span>
-            {`. Forthcoming`}
-          </li>
           {publications.map((publication) => {
             if (publication.type === "paper") {
               return (
