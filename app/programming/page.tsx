@@ -42,7 +42,8 @@ const ProgrammingPage = async () => {
             <span className="bold">
               Radix UI, Shadcn UI, daisyUI, Chakra UI
             </span>
-            ).
+            ). I also contribute to a friend&apos;s startup by helping build the
+            frontend of the project&apos;s app.
           </p>
           <p>
             The site you are currently viewing was designed (Figma) and built by

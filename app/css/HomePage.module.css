@@ -42,6 +42,7 @@
 .heroTagline {
   margin-bottom: 2rem;
   max-width: 32rem;
+  text-align: justify;
 }
 
 .customLink {
@@ -88,7 +89,6 @@
 
   .heroTagline {
     margin-top: 18rem;
-    width: 28rem;
     font-size: 1.8rem;
   }
 }
