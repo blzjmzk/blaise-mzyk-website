@@ -1,5 +1,5 @@
 import React from "react";
-import PostForm from "../../_components/posts-form/PostForm";
+import PostForm from "../../components/posts-form/PostForm";
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
 

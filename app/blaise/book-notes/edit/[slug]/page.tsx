@@ -1,5 +1,5 @@
 import React from "react";
-import BookNotesForm from "../../../_components/book-notes-form/";
+import BookNotesForm from "../../../components/book-notes-form";
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
 

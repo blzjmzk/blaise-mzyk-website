@@ -4,8 +4,8 @@ import Link from "next/link";
 import Button from "../../../components/button";
 import formatDate from "../../../services/FormatDate";
 import styles from "./ProjectsPage.module.css";
-import DeleteBookNoteButton from "../_components/delete-book-note-button/DeleteBookNoteButton";
-import DeleteProjectButton from "../_components/delete-project-button/DeleteProjectButton";
+import DeleteBookNoteButton from "../components/delete-book-note-button/DeleteBookNoteButton";
+import DeleteProjectButton from "../components/delete-project-button/DeleteProjectButton";
 
 const ProjectsPage = async () => {
   const projects = await prisma.project.findMany({

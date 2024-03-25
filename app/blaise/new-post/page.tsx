@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const PostForm = dynamic(
-  () => import("@/app/blaise/_components/posts-form/PostForm"),
+  () => import("@/app/blaise/components/posts-form/PostForm"),
   {
     ssr: false,
   }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../../components/button";
 import formatDate from "../../services/FormatDate";
 import styles from "./PostsPage.module.css";
-import DeletePostButton from "./_components/delete-post-button/DeletePostButton";
+import DeletePostButton from "./components/delete-post-button/DeletePostButton";
 
 const PostsPage = async () => {
   const posts = await prisma.post.findMany({
