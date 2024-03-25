@@ -1,10 +1,10 @@
 import prisma from "@/prisma/client";
 import { Metadata } from "next";
 import Link from "next/link";
-import Header from "../components/header";
-import formatDate from "../services/FormatDate";
+import Header from "../../components/header";
+import formatDate from "../../services/FormatDate";
 import styles from "./BlogPage.module.css";
-import CategoryBadge from "../components/category-badge";
+import CategoryBadge from "../../components/category-badge";
 
 const BlogPage = async () => {
   const posts = await prisma.post.findMany({

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Header from "../components/header";
+import Header from "../../components/header";
 import ContactForm from "./ContactForm";
 
 const ContactPage = () => {

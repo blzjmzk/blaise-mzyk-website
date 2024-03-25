@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/app/components/button";
+import Button from "@/components/button";
 import { bookNoteSchema } from "@/app/validationSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { BookNote } from "@prisma/client";

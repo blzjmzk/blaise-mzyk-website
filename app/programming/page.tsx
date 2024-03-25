@@ -2,12 +2,12 @@ import prisma from "@/prisma/client";
 import { Metadata } from "next";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import Button from "../components/button";
-import Header from "../components/header";
+import Button from "../../components/button";
+import Header from "../../components/header";
 import styles from "./ProgrammingPage.module.css";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr"; //Licence MIT
 import Link from "next/link";
-import SectionHeading from "../components/section-heading";
+import SectionHeading from "../../components/section-heading";
 
 const ProgrammingPage = async () => {
   const projects = await prisma.project.findMany({
