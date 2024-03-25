@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/app/_components/button";
+import Button from "@/app/components/button";
 import { postSchema } from "@/app/validationSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Post } from "@prisma/client";

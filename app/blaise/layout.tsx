@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
-import Header from "../_components/header";
+import Header from "../components/header";
 import styles from "./Layout.module.css";
 import { useSession } from "next-auth/react";
 

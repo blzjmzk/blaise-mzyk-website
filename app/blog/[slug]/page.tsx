@@ -1,11 +1,11 @@
-import Header from "@/app/_components/header";
+import Header from "@/app/components/header";
 import prisma from "@/prisma/client";
 import { notFound } from "next/navigation";
 import { cache, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./PostPage.module.css";
 import Link from "next/link";
-import Button from "@/app/_components/button";
+import Button from "@/app/components/button";
 
 interface Props {
   params: { slug: string };

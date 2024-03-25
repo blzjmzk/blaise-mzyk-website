@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import prisma from "@/prisma/client";
 import styles from "./BookNotesPage.module.css";
-import Header from "../_components/header";
+import Header from "../components/header";
 import Link from "next/link";
 import Image from "next/image";
 

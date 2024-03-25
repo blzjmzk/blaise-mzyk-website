@@ -1,8 +1,8 @@
 import prisma from "@/prisma/client";
 import { Metadata } from "next";
 import Link from "next/link";
-import Button from "../_components/button";
-import formatDate from "../_services/FormatDate";
+import Button from "../components/button";
+import formatDate from "../services/FormatDate";
 import styles from "./PostsPage.module.css";
 import DeletePostButton from "./_components/delete-post-button/DeletePostButton";
 

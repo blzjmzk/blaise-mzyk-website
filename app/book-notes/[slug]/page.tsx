@@ -1,5 +1,5 @@
-import Header from "@/app/_components/header";
-import SectionHeading from "@/app/_components/section-heading";
+import Header from "@/app/components/header";
+import SectionHeading from "@/app/components/section-heading";
 import prisma from "@/prisma/client";
 import Image from "next/image";
 import { notFound } from "next/navigation";

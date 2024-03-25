@@ -9,9 +9,9 @@ import Image from "next/image";
 import Link from "next/link";
 import logo_google_scholar from "../../public/images/logo-google-scholar.png";
 import logo_philpeople from "../../public/images/logo-philpeople.svg";
-import Button from "../_components/button";
-import Header from "../_components/header";
-import SectionHeading from "../_components/section-heading";
+import Button from "../components/button";
+import Header from "../components/header";
+import SectionHeading from "../components/section-heading";
 import styles from "./PhilosophyPage.module.css";
 
 const PhilosophyPage = async () => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import photo_of_blaise_mzyk from "../public/images/photo_of_blazej_mzyk.jpg";
 import styles from "@/app/css/HomePage.module.css";
 import { Metadata } from "next";
-import Button from "./_components/button";
+import Button from "./components/button";
 
 const HomePage = () => {
   return (
