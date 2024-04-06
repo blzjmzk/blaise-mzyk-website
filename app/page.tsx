@@ -32,18 +32,18 @@ const HomePage = () => {
         <div className={styles.heroBlockTwo}>
           <p className={styles.heroTagline}>
             I am a{" "}
-            <Link href="/philosophy" className={styles.customLink}>
-              philosopher
+            <Link href="/programming" className={styles.customLink}>
+              software engineer
             </Link>{" "}
-            (finishing PhD) and an{" "}
+            and a{" "}
             <Link
-              href="/programming"
+              href="/philosophy"
               className={`${styles.customLink} ${styles.noWrap}`}
             >
-              aspiring software engineer
+              philosopher
             </Link>{" "}
-            based in Kraków, Poland. Here you can find more information about
-            me, as well as my{" "}
+            (completing PhD) based in Kraków, Poland. Here you can find more
+            information about me, as well as my{" "}
             <Link
               href="/book-notes"
               className={`${styles.customLink} ${styles.noWrap}`}

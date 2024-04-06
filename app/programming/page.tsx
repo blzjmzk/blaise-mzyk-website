@@ -40,29 +40,25 @@ const ProgrammingPage = async () => {
             ). I have also worked on projects using{" "}
             <span className="bold">TailwindCSS</span> and various UI libraries (
             <span className="bold">
-              Radix UI, Shadcn UI, daisyUI, Chakra UI
+              Radix UI, Shadcn UI, daisyUI, Chakra UI, Headless UI
             </span>
-            ). I also contribute to a friend&apos;s startup by helping build the
-            frontend of the project&apos;s app.
+            ).
           </p>
           <p>
-            The site you are currently viewing was designed (Figma) and built by
-            me from scratch in Next.js 14. Below you can see details about some
-            of my projects
+            <span className="bold">
+              I also contribute to a friend&apos;s startup
+            </span>{" "}
+            by helping build the frontend of the project&apos;s app.
           </p>
+          <p>
+            <span className="bold">
+              The site you are currently viewing was designed (Figma) and built
+              by me from scratch in Next.js 14
+            </span>
+            .
+          </p>
+          <p>Below you can see details about some of my projects:</p>
         </div>
-        <Link
-          href="https://github.com/blzjmzk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant="primary">
-            <div className={styles.projectsTaglineButton}>
-              See my GitHub Profile
-              <GithubLogo size={29} color="var(--color-white)" />
-            </div>
-          </Button>
-        </Link>
       </section>
       <section className={styles.projectsContainer}>
         {projects.map((project) => (
@@ -147,6 +143,20 @@ const ProgrammingPage = async () => {
             </div>
           </div>
         ))}
+      </section>
+      <section className={styles.seeMore}>
+        <Link
+          href="https://github.com/blzjmzk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="primary" width="100%">
+            <div className={styles.projectsTaglineButton}>
+              See more projects on my GitHub
+              <GithubLogo size={29} color="var(--color-white)" />
+            </div>
+          </Button>
+        </Link>
       </section>
     </>
   );
