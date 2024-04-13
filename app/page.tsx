@@ -64,7 +64,9 @@ const HomePage = () => {
 };
 
 export const metadata: Metadata = {
-  title: "Blaise Mzyk | Homepage",
+  title: "Blaise Mzyk",
+  description:
+    "Personal website and blog of Błażej Mzyk - philosopher and sofware engineer. Here you can find more information about me, as well as my book notes and posts.",
 };
 
 export default HomePage;
