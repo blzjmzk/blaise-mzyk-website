@@ -14,6 +14,16 @@
   margin: 6rem auto;
   max-width: 40rem;
 }
+
+/* code {
+  transform: translateZ(0);
+  min-width: 100%;
+  float: left;
+  & > span {
+    display: block;
+  }
+} */
+
 @media screen and (min-width: 768px) {
   .postContainer {
     padding-top: 6rem;
