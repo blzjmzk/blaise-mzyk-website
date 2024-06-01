@@ -34,12 +34,27 @@
   line-height: 0.9;
 }
 
+.heroBannerSkeleton {
+  width: 18rem;
+  height: 9.6rem;
+  padding: 2rem 2rem;
+  position: absolute;
+  top: 3.6rem;
+  left: 4.4rem;
+}
+
 .heroBlockTwo {
   display: flex;
   flex-direction: column;
 }
 
 .heroTagline {
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  text-align: justify;
+}
+
+.heroTaglineSkeleton {
   margin-bottom: 2rem;
   max-width: 32rem;
   text-align: justify;
@@ -83,12 +98,28 @@
     left: 32.8rem;
   }
 
+  .heroBannerSkeleton {
+    width: 29.6rem;
+    height: 16rem;
+    padding: 3.2rem 2.4rem 0 2.4rem;
+    top: 6rem;
+    left: 32.8rem;
+  }
+
   .heroBlockTwo {
     margin-left: 2rem;
   }
 
   .heroTagline {
     margin-top: 18rem;
+    font-size: 1.8rem;
+  }
+
+  .skeleton {
+    margin-top: 18rem;
+  }
+
+  .heroTaglineSkeleton {
     font-size: 1.8rem;
   }
 }
