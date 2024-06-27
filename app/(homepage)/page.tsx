@@ -52,11 +52,9 @@ const HomePage = () => {
             </Link>
             . I also encourage you to check out my blog.
           </p>
-          <Button variant={"primary"}>
-            <Link href="/blog" className="link-clear">
-              Read My blog
-            </Link>
-          </Button>
+          <Link href="/blog" className="link-clear">
+            <Button variant={"primary"}>Read My blog</Button>
+          </Link>
         </div>
       </header>
     </>
