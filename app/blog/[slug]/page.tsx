@@ -16,10 +16,12 @@ import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typesc
 import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Node } from "unist";
 import styles from "./PostPage.module.css";
+import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("typescript", typescript);
 SyntaxHighlighter.registerLanguage("json", json);
+SyntaxHighlighter.registerLanguage("css", css);
 
 interface Props {
   params: { slug: string };
