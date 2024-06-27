@@ -10,33 +10,17 @@ import {
   PrismLight as SyntaxHighlighter,
   SyntaxHighlighterProps,
 } from "react-syntax-highlighter";
-import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
-import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import { Node } from "unist";
 import styles from "./PostPage.module.css";
-import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
-SyntaxHighlighter.registerLanguage("typescript", typescript);
-SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("css", css);
 
 interface Props {
   params: { slug: string };
-}
-
-interface CodeProps {
-  node: Node;
-  inline: boolean;
-  className: string;
-}
-
-interface NodeWithData extends Node {
-  data?: {
-    meta?: string;
-  };
 }
 
 const fetchPost = cache((postSlug: string) =>
@@ -47,14 +31,28 @@ interface HighlighterProps extends SyntaxHighlighterProps {
   children: string | string[];
 }
 
+interface CodeProps {
+  node: Node;
+  inline: boolean;
+  className?: string;
+  children: string | string[];
+}
+
+interface NodeWithData extends Node {
+  data?: {
+    meta?: string;
+  };
+}
+
 const PostPage = async ({ params }: Props) => {
   const post = await fetchPost(params.slug);
-
   if (!post) return notFound();
+
   const syntaxTheme = oneLight;
 
   const MarkdownComponents: object = {
-    code({ node, inline, className, ...props }: CodeProps & HighlighterProps) {
+    code({ node, inline, className, ...props }: CodeProps) {
+      const hasLang = /language-(\w+)/.exec(className || "");
       const hasMeta = (node as NodeWithData)?.data?.meta;
 
       const applyHighlights: object = (applyHighlights: number) => {
@@ -64,11 +62,12 @@ const PostPage = async ({ params }: Props) => {
             /\s/g,
             ""
           );
-          const strlineNumbers = RE.test(metadata!)
-            ? RE.exec(metadata!)?.[1] || "0"
+          const strlineNumbers = RE?.test(metadata!)
+            ? RE.exec(metadata!)?.[1]
             : "0";
-          const highlightLines = rangeParser(strlineNumbers);
-          const data: string | null = highlightLines.includes(applyHighlights)
+          const highlightLines = rangeParser(strlineNumbers || "0");
+          const highlight = highlightLines;
+          const data: string | null = highlight.includes(applyHighlights)
             ? "highlight"
             : null;
           return { data };
@@ -77,22 +76,21 @@ const PostPage = async ({ params }: Props) => {
         }
       };
 
-      return (
+      return hasLang ? (
         <SyntaxHighlighter
           style={syntaxTheme}
-          language={className.replace("language-", "")}
+          language={hasLang[1]}
           PreTag="div"
           className="codeStyle"
           showLineNumbers={true}
-          wrapLines={!!hasMeta}
+          wrapLines={true}
           useInlineStyles={true}
           lineProps={applyHighlights}
-          {...props}
         >
-          {Array.isArray(props.children)
-            ? props.children.join("")
-            : props.children}
+          {props.children}
         </SyntaxHighlighter>
+      ) : (
+        <code className={className} {...props} />
       );
     },
   };
