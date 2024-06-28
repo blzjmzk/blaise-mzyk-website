@@ -35,7 +35,7 @@ const CategoryFilter = () => {
           onClick={() => handleClick(category.label)}
         >
           <div className={styles.categoryButton}>
-            {category.icon}
+            <span className={styles.iconContainer}>{category.icon}</span>
             {category.label}
           </div>
         </Button>
