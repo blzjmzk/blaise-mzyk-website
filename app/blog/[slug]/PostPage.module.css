@@ -3,6 +3,11 @@
   margin: 0 auto;
   padding-top: 4.4rem;
 }
+
+.postContainer p {
+  text-align: justify;
+}
+
 .postContainer img {
   padding: 1.2rem 0 0 0;
   width: 100%;

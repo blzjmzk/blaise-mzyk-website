@@ -46,12 +46,12 @@
 .heroBlockTwo {
   display: flex;
   flex-direction: column;
+  max-width: 32rem;
+  text-align: justify;
 }
 
 .heroTagline {
   margin-bottom: 2rem;
-  max-width: 32rem;
-  text-align: justify;
 }
 
 .heroTaglineSkeleton {
