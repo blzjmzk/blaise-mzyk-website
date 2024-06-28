@@ -32,7 +32,9 @@ const BlogPage = async () => {
                 </div>
                 <div className={styles.propertiesContainer}>
                   <span className={styles.postProperties}>Category:</span>{" "}
-                  <CategoryBadge>{post.category}</CategoryBadge>
+                  <CategoryBadge categoryName={post.category}>
+                    {post.category}
+                  </CategoryBadge>
                 </div>
               </div>
               <p>{post.description}</p>
