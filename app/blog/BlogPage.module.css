@@ -1,3 +1,8 @@
+.categoryFilter {
+  padding-top: 2.8rem;
+  padding-bottom: 1.2rem;
+}
+
 .postsList {
   margin-top: 2rem;
   margin-bottom: 8rem;
@@ -76,5 +81,11 @@
 
   .postPublishedValue {
     font-size: 1.333rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .categoryFilter button {
+    font-size: 1.6rem;
   }
 }

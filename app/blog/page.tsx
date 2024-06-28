@@ -5,15 +5,28 @@ import Header from "../../components/header";
 import formatDate from "../../services/FormatDate";
 import styles from "./BlogPage.module.css";
 import CategoryBadge from "../../components/category-badge";
+import CategoryFilter from "./components/CategoryFilter";
 
-const BlogPage = async () => {
+const BlogPage = async ({
+  searchParams,
+}: {
+  searchParams: { category?: string };
+}) => {
+  const categoryFilter = searchParams.category;
   const posts = await prisma.post.findMany({
+    where:
+      categoryFilter && categoryFilter !== "All Posts"
+        ? { category: categoryFilter }
+        : {},
     orderBy: { publishedAt: "desc" },
   });
 
   return (
     <>
       <Header>Blog</Header>
+      <div className={styles.categoryFilter}>
+        <CategoryFilter />
+      </div>
       <div className={styles.postsList}>
         {posts.map((post) => (
           <Link
