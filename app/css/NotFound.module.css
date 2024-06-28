@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10rem;
+  align-items: center;
+  height: 100vh;
+}
+
+.link {
+  padding-top: 4rem;
+}
