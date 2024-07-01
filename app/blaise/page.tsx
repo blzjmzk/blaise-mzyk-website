@@ -14,11 +14,11 @@ const PostsPage = async () => {
   return (
     <div className={styles.PostsPage}>
       <h2>Posts</h2>
-      <Button variant="primary" width="25rem">
-        <Link href="/blaise/new-post" className="link-clear">
+      <Link href="/blaise/new-post">
+        <Button variant="primary" width="25rem">
           Add New Post
-        </Link>
-      </Button>
+        </Button>
+      </Link>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -56,14 +56,9 @@ const PostsPage = async () => {
                   : formatDate(post.updatedAt.toDateString())}
               </td>
               <td className={styles.tableData}>
-                <Button variant="primary">
-                  <Link
-                    className="link-clear"
-                    href={`/blaise/edit/${post.slug}`}
-                  >
-                    Edit
-                  </Link>
-                </Button>
+                <Link href={`/blaise/edit/${post.slug}`}>
+                  <Button variant="primary">Edit</Button>
+                </Link>
               </td>
               <td className={styles.tableData}>
                 <DeletePostButton postSlug={post.slug} />

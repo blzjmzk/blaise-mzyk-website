@@ -15,11 +15,11 @@ const ProjectsPage = async () => {
   return (
     <div className={styles.BookNotesPage}>
       <h2>Projects</h2>
-      <Button variant="primary" width="25rem">
-        <Link href="/blaise/projects/new-project" className="link-clear">
+      <Link href="/blaise/projects/new-project">
+        <Button variant="primary" width="25rem">
           Add New Project
-        </Link>
-      </Button>
+        </Button>
+      </Link>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -49,14 +49,9 @@ const ProjectsPage = async () => {
                 {formatDate(project.publishedAt.toDateString())}
               </td>
               <td className={styles.tableData}>
-                <Button variant="primary">
-                  <Link
-                    className="link-clear"
-                    href={`/blaise/projects/edit/${project.id}`}
-                  >
-                    Edit
-                  </Link>
-                </Button>
+                <Link href={`/blaise/projects/edit/${project.id}`}>
+                  <Button variant="primary">Edit</Button>
+                </Link>
               </td>
               <td className={styles.tableData}>
                 <DeleteProjectButton projectId={project.id} />

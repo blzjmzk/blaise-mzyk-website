@@ -1,11 +1,19 @@
 import prisma from "@/prisma/client";
+import { Post } from "@prisma/client";
 import { Metadata } from "next";
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "../../components/header";
-import formatDate from "../../services/FormatDate";
 import styles from "./BlogPage.module.css";
-import CategoryBadge from "../../components/category-badge";
-import CategoryFilter from "./components/CategoryFilter";
+import CategoryFilter from "./components/category-filter";
+import PostsListSkeleton from "./loading/PostsListSkeleton";
+
+const PostsList = dynamic(
+  () => import("@/app/blog/components/posts-list/PostsList"),
+  {
+    ssr: false,
+    loading: () => <PostsListSkeleton />,
+  }
+);
 
 const BlogPage = async ({
   searchParams,
@@ -13,7 +21,7 @@ const BlogPage = async ({
   searchParams: { category?: string };
 }) => {
   const categoryFilter = searchParams.category;
-  const posts = await prisma.post.findMany({
+  const posts: Post[] = await prisma.post.findMany({
     where:
       categoryFilter && categoryFilter !== "All Posts"
         ? { category: categoryFilter }
@@ -27,39 +35,12 @@ const BlogPage = async ({
       <div className={styles.categoryFilter}>
         <CategoryFilter />
       </div>
-      <div className={styles.postsList}>
-        {posts.map((post) => (
-          <Link
-            className="link-clear-black"
-            key={post.id}
-            href={`/blog/${post.slug}`}
-          >
-            <div className={styles.postContainer}>
-              <h2 className={styles.postTitle}>{post.title}</h2>
-              <div className={styles.postPropertiesContainer}>
-                <div className={styles.propertiesContainer}>
-                  <span className={styles.postProperties}>Published:</span>{" "}
-                  <span className={styles.postPublishedValue}>
-                    {formatDate(post.publishedAt.toDateString())}
-                  </span>
-                </div>
-                <div className={styles.propertiesContainer}>
-                  <span className={styles.postProperties}>Category:</span>{" "}
-                  <CategoryBadge categoryName={post.category}>
-                    {post.category}
-                  </CategoryBadge>
-                </div>
-              </div>
-              <p>{post.description}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <PostsList posts={posts} />
     </>
   );
 };
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Blaise Mzyk | Blog",

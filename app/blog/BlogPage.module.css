@@ -12,6 +12,17 @@
   gap: 3.6rem;
 }
 
+.postsListSkeleton {
+  margin-bottom: 8rem;
+  padding-top: 2rem;
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
 .postContainer {
   background-color: #fbefdd;
   margin: 0 auto;

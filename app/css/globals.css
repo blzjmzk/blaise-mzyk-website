@@ -32,11 +32,6 @@ html {
 }
 
 /* UTILITIES */
-.link-clear {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
 .link-clear-black {
   color: var(--color-black);
   text-decoration: none;
