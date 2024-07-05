@@ -27,15 +27,16 @@ const ProgrammingPage = async () => {
             technologies.
           </p>
           <p>
-            I specialize in frontend development (
+            I focus on frontend development (
             <span className="bold">
               Next.js, React, TypeScript, JavaScript, HTML/CSS
             </span>
-            ). I also have a background in backend (
+            ). I also have skills in backend (
             <span className="bold">
-              Prisma, Express.js, building API in Next.js
+              Prisma ORM, Express.js, building API in Next.js and Spring
             </span>
-            ), databases (<span className="bold">MySQL, MongoDB</span>) and
+            ), databases (
+            <span className="bold">MySQL, PostgresSQL, MongoDB</span>) and
             graphic design (<span className="bold">Figma</span>
             ). I have also worked on projects using{" "}
             <span className="bold">TailwindCSS</span> and various UI libraries (
@@ -45,10 +46,9 @@ const ProgrammingPage = async () => {
             ).
           </p>
           <p>
-            <span className="bold">
-              I also contribute to a friend&apos;s startup
-            </span>{" "}
-            by helping build the frontend of the project&apos;s app.
+            <span className="bold">I also contribute to a startup</span> by
+            helping build the frontend and particular endpoints of the
+            project&apos;s app.
           </p>
           <p>
             <span className="bold">
