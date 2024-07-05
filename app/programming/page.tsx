@@ -33,7 +33,8 @@ const ProgrammingPage = async () => {
             </span>
             ). I also have skills in backend (
             <span className="bold">
-              Prisma ORM, Express.js, building API in Next.js and Spring
+              Prisma ORM, Express.js, building API in Next.js, building
+              endpoints in Spring
             </span>
             ), databases (
             <span className="bold">MySQL, PostgresSQL, MongoDB</span>) and
