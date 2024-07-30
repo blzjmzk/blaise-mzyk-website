@@ -136,8 +136,19 @@ const ProgrammingPage = async () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" width="100%">
+                    <Button variant="primary" width="100%">
                       See Design in Figma
+                    </Button>
+                  </Link>
+                )}
+                {project.type === "backend" && (
+                  <Link
+                    href={project.codeLink!}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="primary" width="100%">
+                      See Code
                     </Button>
                   </Link>
                 )}
