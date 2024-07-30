@@ -33,8 +33,8 @@ const ProgrammingPage = async () => {
             </span>
             ). I also have skills in backend (
             <span className="bold">
-              Prisma ORM, Express.js, building API in Next.js, building
-              endpoints in Spring
+              Prisma ORM, Node.js, Spring (endpoints, authentication), building
+              API in Next.js,
             </span>
             ), databases (
             <span className="bold">MySQL, PostgresSQL, MongoDB</span>) and
@@ -48,8 +48,9 @@ const ProgrammingPage = async () => {
           </p>
           <p>
             <span className="bold">I also contribute to a startup</span> by
-            helping build the frontend and particular endpoints of the
-            project&apos;s app.
+            working on an application that conducts surveys among employees to
+            increase the productivity of teams (stack: Next.js frontend, Spring
+            backend).
           </p>
           <p>
             <span className="bold">
