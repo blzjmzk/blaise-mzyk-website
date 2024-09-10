@@ -19,8 +19,8 @@ const ProgrammingPage = async () => {
       <section className={styles.projectsTagline}>
         <div>
           <p>
-            I became interested in programming in high school, where I was
-            acquainted with <span className="bold">C++</span> and HTML because
+            I became interested in programming in high school, where I had
+            experience with <span className="bold">C++</span> and HTML because
             my class had an extended math and computer science program. I
             returned to this interest during my PhD studies. I started learning{" "}
             <span className="bold">Python</span>, then moved on to other
@@ -29,28 +29,20 @@ const ProgrammingPage = async () => {
           <p>
             I focus on frontend development (
             <span className="bold">
-              Next.js, React, TypeScript, JavaScript, HTML/CSS
+              HTML/CSS, JavaScript, TypeScript, React, Next.js
             </span>
             ). I also have skills in backend (
             <span className="bold">
-              Prisma ORM, Node.js, Spring (endpoints, authentication), building
-              API in Next.js,
+              Prisma ORM, Node.js, Spring Boot, building API in Next.js,
             </span>
-            ), databases (
-            <span className="bold">MySQL, PostgresSQL, MongoDB</span>) and
+            ), databases (<span className="bold">SQL, MongoDB</span>) and
             graphic design (<span className="bold">Figma</span>
-            ). I have also worked on projects using{" "}
-            <span className="bold">TailwindCSS</span> and various UI libraries (
-            <span className="bold">
-              Radix UI, Shadcn UI, daisyUI, Chakra UI, Headless UI
-            </span>
             ).
           </p>
           <p>
             <span className="bold">I also contribute to a startup</span> by
             working on an application that conducts surveys among employees to
-            increase the productivity of teams (stack: Next.js frontend, Spring
-            backend).
+            increase the productivity of teams.
           </p>
           <p>
             <span className="bold">
