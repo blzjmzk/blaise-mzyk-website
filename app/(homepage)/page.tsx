@@ -32,10 +32,6 @@ const HomePage = () => {
         <div className={styles.heroBlockTwo}>
           <p className={styles.heroTagline}>
             I am a{" "}
-            <Link href="/programming" className={styles.customLink}>
-              software engineer
-            </Link>{" "}
-            and a{" "}
             <Link
               href="/philosophy"
               className={`${styles.customLink} ${styles.noWrap}`}

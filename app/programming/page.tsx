@@ -31,25 +31,11 @@ const ProgrammingPage = async () => {
             <span className="bold">
               HTML/CSS, JavaScript, TypeScript, React, Next.js
             </span>
-            ). I also have skills in backend (
-            <span className="bold">
-              Prisma ORM, Node.js, Spring Boot, building API in Next.js,
-            </span>
-            ), databases (<span className="bold">SQL, MongoDB</span>) and
-            graphic design (<span className="bold">Figma</span>
+            ). I also have experience in backend (
+            <span className="bold">Prisma ORM, building API in Next.js</span>
+            ), <span className="bold">SQL</span> and graphic design (
+            <span className="bold">Figma</span>
             ).
-          </p>
-          <p>
-            <span className="bold">I also contribute to a startup</span> by
-            working on an application that conducts surveys among employees to
-            increase the productivity of teams.
-          </p>
-          <p>
-            <span className="bold">
-              The site you are currently viewing was designed (Figma) and built
-              by me from scratch in Next.js 14
-            </span>
-            .
           </p>
           <p>Below you can see details about some of my projects:</p>
         </div>
