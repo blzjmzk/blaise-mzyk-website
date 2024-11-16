@@ -38,8 +38,8 @@ const HomePage = () => {
             >
               philosopher
             </Link>{" "}
-            (completing PhD) based in Kraków, Poland. Here you can find more
-            information about me, as well as my{" "}
+            based in Kraków, Poland. Here you can find more information about
+            me, as well as my{" "}
             <Link
               href="/book-notes"
               className={`${styles.customLink} ${styles.noWrap}`}
